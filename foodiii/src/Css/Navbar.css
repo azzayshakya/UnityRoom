@@ -1,0 +1,30 @@
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+   
+    padding: 25px 0px 20px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+li{
+    display: inline-block;
+    padding: 0px 20px;
+  
+    cursor: pointer;
+    
+
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
+.navbar{
+   
+}

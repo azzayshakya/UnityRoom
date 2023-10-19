@@ -1,0 +1,132 @@
+
+.footer{
+    /* border: 2px solid red; */
+    height: 400px;
+    width: 95%;
+    margin-left: 35px;
+    border-bottom: 1px grey solid;
+    /* border-top: 1px solid grey; */
+
+
+}
+
+.footer .first {
+    margin: 20px 0px;
+    font-weight: bold;
+
+
+}
+
+.footer .first-column{
+    /* border: 2px solid red; */
+    height: 40px;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+
+
+}
+
+.footer .first-column div{
+    /* border: 2px solid red; */
+    height: 30px;
+    width: 160px;
+
+}
+
+
+
+
+.footer .second-column{
+    /* border: 2px solid red; */
+    height: 30px;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    color: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+
+}
+
+.footer .second-column div{
+    /* border: 2px solid red; */
+    height: 30px;
+    width: 160px;
+
+}
+
+
+.footer .theird-column{
+    /* border: 2px solid red; */
+    height: 50px;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    color: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+
+
+
+}
+
+.footer .theird-column div{
+    /* border: 2px solid red; */
+    height: 30px;
+    width: 160px;
+
+}
+
+
+.footer .fourth-column{
+    /* border: 2px solid red; */
+    height: 50px;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    color: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+.footer .fourth-column div{
+    /* border: 2px solid red; */
+    height: 30px;
+    width: 160px;
+
+}
+
+.footer .fifth-column{
+    /* border: 2px solid red; */
+    height: 50px;
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    color: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+
+
+
+} 
+
+ .footer .fifth-column div{
+    /* border: 2px solid red; */
+    height: 30px;
+    width: 160px;
+
+
+} 
+
+.copyright{
+    margin: 20px 35px ;
+    color: grey;
+}

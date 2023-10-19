@@ -1,0 +1,108 @@
+.head{
+    /* border: 2px red solid; */
+    height: 419px;
+    /* background: src('../Images/zomatoHead.webp'); */
+    background-position: center; 
+    /* background-color: black; */
+}
+
+.head img{
+    width: 100%;
+    height: 350px;
+ 
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+   
+    padding: 25px 0px 20px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    display: inline-block;
+    padding: 0px 20px;
+  
+    cursor: pointer;
+
+}
+.mid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.mid h1{
+    color: white;
+    font-size: 100px;
+}
+.mid h3{
+    color: white;
+    font-size: 38px;
+    margin-top: 30px;
+    font-weight: lighter;
+    
+}
+
+
+
+.search-place{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    height: 50px;
+    width: 750px;
+    border-radius: 10px;
+    padding: 5px 0px;
+
+    
+
+}
+
+
+.search-place .location{
+    
+    height: 25px;
+    width: 6%;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    
+}
+.search-place .search {
+    height: 25px;
+    width: 6%;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+} 
+.mid input {
+    width: 50%;
+    height: 70%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.mid p{
+    color: grey;
+    width: 30%;
+    /* text-align: center; */
+    border-right: 1px solid gray;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
