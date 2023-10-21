@@ -24,7 +24,7 @@ const Midpart = () => {
                
             </div>
             <div className="about">
-                <span>dining</span>
+                <span>Rooms</span>
                 view the city's favourite d..
             </div>
         </div>
@@ -138,7 +138,7 @@ const Midpart = () => {
         </div>
         <div className="right">
               
-            <h1>Get the Zomato app</h1>
+            <h1>Get the Foodiii app</h1>
               <h3> We will send you a link, open it on your phone to download <br/>the app</h3> 
               <div>
                 <input type="radio"/>
