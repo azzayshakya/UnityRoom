@@ -7,7 +7,6 @@ const Foodcards = () => {
     return <div>
         <div className="navbar"> 
         <Navbar/>
-        
         </div>
         <div className="cardmain">
             <Card/>

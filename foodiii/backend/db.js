@@ -5,6 +5,19 @@ const ConnectDb=async ()=>{
         {useUnifiedTopology:true})
         // console.log(conn)
         console.log("connented")
+        // const fetched_data=mongoose.connection.db.collection("food_items");
+        // fetched_data.find({}).toArray((err,data)=>{
+        //     if(err){
+        //         console.log(err);
+            
+        //     }
+        //     else{
+        //         console.log(data);
+        //     }
+           
+        // })
+        // console.log("done")
+
     }
     catch(error){
         console.log(error)

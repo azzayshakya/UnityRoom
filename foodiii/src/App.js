@@ -8,8 +8,7 @@ import {
   Link
 } from "react-router-dom";
 import Login from './Screens/Login';
-import Singup from './Screens/Singup';
-
+import Signup from './Screens/Signup';
 import Foodcards from './Screens/Foodcards';
 
 function App() {
@@ -19,7 +18,7 @@ function App() {
       <Routes>
         <Route exact path ="/" element={<Home/>}/>
         <Route exact path ="/login" element={<Login/>}/>
-        <Route exact path ="/Singup" element={<Singup/>}/>
+        <Route exact path ="/Signup" element={<Signup/>}/>
 
         <Route exact path ="/foodcards" element={<Foodcards/>}/>
 

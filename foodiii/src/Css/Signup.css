@@ -1,0 +1,47 @@
+.sign_up_form_main_container{
+    position: relative;
+      width: 400px;
+      height: 620px;
+      max-width: 400px;
+      max-height: 650px;
+      background: #040717;
+      border-radius: 50px 5px;
+      display: flex;
+      
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-top: 70px;
+}
+
+.fa-solid{
+  font-size: 20px;
+}
+.CurrentLocationBtn button{
+  background-color:#0c1022;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  margin-left: 20px;
+  border: 1px solid #00ccff;
+  /* color: ; */
+  padding:10px 40px;
+  font-size: 15px;
+  margin-bottom: -20px;
+  border-radius: 50px;
+}
+
+#login_button2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #00ccff;
+  border-radius: 50%;
+  
+  margin-top: 10px;
+}
+
+#login_button2 a{
+  color: #00ccff;
+  text-decoration: none;
+}
