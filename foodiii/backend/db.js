@@ -4,19 +4,20 @@ const ConnectDb=async ()=>{
         const conn=await mongoose.connect("mongodb+srv://Foodiii:ajayajay@cluster0.ffqduuz.mongodb.net/Foodiii?retryWrites=true&w=majority",
         {useUnifiedTopology:true})
         // console.log(conn)
-        console.log("connented")
-        // const fetched_data=mongoose.connection.db.collection("food_items");
-        // fetched_data.find({}).toArray((err,data)=>{
-        //     if(err){
-        //         console.log(err);
-            
-        //     }
-        //     else{
-        //         console.log(data);
-        //     }
-           
-        // })
-        // console.log("done")
+console.log("connented")
+const fetchFoodItems = async () => {
+    try {
+      const fetched_data = await mongoose.connection.db.collection("food_items");
+      const data = await fetched_data.find({}).toArray();
+    //   console.log("printing the collection data")
+    //   console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  
+  fetchFoodItems();
+       
 
     }
     catch(error){

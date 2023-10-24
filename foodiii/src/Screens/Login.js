@@ -19,13 +19,16 @@ const Login = () => {
       body:JSON.stringify({email:credentials.email,password:credentials.password})
     });
     const json =await response.json();
-    console.log(json);
+    console.log(json); 
     if(!json.success){
       alert("enter valid credentials")
     }
     if(json.success){
+      localStorage.setItem("authToken",json.authToken)
+      console.log(localStorage.getItem("authToken"))
        navigate("/");
     }
+
   }
   const handleNameChange=(event)=>{
     setcredentials({...credentials,[event.target.name]:event.target.value})
