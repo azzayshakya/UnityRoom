@@ -1,3 +1,8 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
 .head{
     /* border: 2px red solid; */
     height: 419px;
@@ -11,12 +16,14 @@
     height: 350px;
  
 }
-header{
+.headernav{
+    /* width: 100%; */
+    /* border: 2px red solid; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
-    font-size: 16px;
+    font-size: 16px; 
    
     padding: 25px 0px 20px 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -106,3 +113,21 @@ li{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+.abc {
+    display: inline-block;
+}
+
+.cde{
+    display: flex;
+    float: right;
+}
+
+.efg li{
+    background-color: red;
+    width: 80px;
+    height: px;
+    margin-right: 10px;
+    border-radius: 5px;
+    color: white;
+}

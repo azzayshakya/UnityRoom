@@ -1,10 +1,17 @@
-
-header{
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+.headermain{
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
     font-size: 16px;
+
+    border: 2px red solid;
+    width: 1250px;
    
     padding: 25px 0px 20px 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -27,4 +34,4 @@ li{
 }
 .navbar{
    
-}
+} 

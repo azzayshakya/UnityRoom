@@ -6,7 +6,7 @@ import background from "../Images/zomatoHead.webp";
 
 const Navbar = () => {
     return <div>
-        <header style={{
+        <header className="headermain" style={{
             backgroundImage: `url(${background})`,
             backgroundPosition: "center"
         }}>

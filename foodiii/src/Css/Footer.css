@@ -1,4 +1,8 @@
-
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
 .footer{
     /* border: 2px solid red; */
     height: 400px;
