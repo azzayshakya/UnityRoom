@@ -112,9 +112,11 @@ const Foodcards = () => {
                                             
                                                 <div key={filterItem._id} className='col-12 col-md-6 col-lg-4 b1'>
                                                 
-                                                <Newcard foodName={filterItem.name}
+                                                <Newcard foodItems={filterItem}
                                                 options={filterItem.options[0]}
-                                                imgSrc={filterItem.img}></Newcard>
+                                                >
+                                                
+                                                </Newcard>
                                                 
                                                    
                                                    
