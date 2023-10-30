@@ -62,6 +62,24 @@ li{
     
 }
 
+.abc {
+    display: inline-block;
+}
+
+.cde{
+    display: flex;
+    float: right;
+}
+
+.efg li{
+    background-color: red;
+    width: 80px;
+    height: px;
+    margin-right: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
 
 
 .search-place{
@@ -73,13 +91,17 @@ li{
     width: 750px;
     border-radius: 10px;
     padding: 5px 0px;
+    /* border: px black solid; */
 
-    
 
+    /* width: 100%; */
+    margin-left: 280px;
+    margin-top: 40px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 
-.search-place .location{
+ .search-place .location{
     
     height: 25px;
     width: 6%;
@@ -87,7 +109,7 @@ li{
     padding-right: 10px;
     
     
-}
+} 
 .search-place .search {
     height: 25px;
     width: 6%;
@@ -95,6 +117,18 @@ li{
     padding-right: 10px;
     
 } 
+.HeaderSearchImg{
+    height: 25px;
+    width: 6%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 2px grey solid;
+
+}
+
+
+
+
 .mid input {
     width: 50%;
     height: 70%;
@@ -114,20 +148,27 @@ li{
 }
 
 
-.abc {
-    display: inline-block;
+
+
+.HeaderSearchInput{
+    width: 50%;
+    height: 70%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* color: red; */
+    
 }
 
-.cde{
-    display: flex;
-    float: right;
-}
 
-.efg li{
-    background-color: red;
-    width: 80px;
-    height: px;
-    margin-right: 10px;
-    border-radius: 5px;
-    color: white;
-}
+.search-place ::placeholder {
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+  
+  /* .search-place ::-ms-input-placeholder { 
+    color: red;
+  } */
+  

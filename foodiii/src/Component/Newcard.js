@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDispatchCart,useCart } from '../Component/ContextReducer';
 const propTypes = {};
 
@@ -8,6 +8,7 @@ const propTypes = {};
 
 
 const Newcard = (props) => {
+  let data=useCart();
 
 
   // let foodItem =props.foodItems;
@@ -15,9 +16,20 @@ const Newcard = (props) => {
 
   let options =props.options;
   let priceOptions =Object.keys(options);
+  const priceRef =useRef();
   const [qty,setQty]=useState(1)
   const [size,setSize]=useState("")
-  const
+ 
+const handleAddToCart =async()=>{
+  await dispatch({type:"ADD",id:props.foodItems._id,name:props.foodItems.name,price:finalPrice,qty:qty,size:size})
+  console.log(data)
+}
+
+
+let finalPrice =qty * parseInt(options[size]);
+useEffect(()=>{
+  setSize(priceRef.current.value)
+},[])
 
 
   // console.log(priceOptions)
@@ -40,20 +52,20 @@ const Newcard = (props) => {
   <div class="card-body">
     <h5 class="card-title">{props.foodItems.name}</h5>
     <div className="container w-100">
-    <select name="" className='m-2 h-100 bg-success rounded' id="">{
+    <select name="" className='m-2 h-100 bg-success rounded' id="" onChange={(e)=>setQty(e.target.value)}>{
                         Array.from(Array(6), (e, i) => {
                             return (
                                 <option value={i + 1} key={i + 1}>{i + 1}</option>                            
                                    )})}
                     </select>
 
-                    <select name="" className='m-2 h-100 bg-success rounded' id="seound">
+                    <select name="" className='m-2 h-100 bg-success rounded' id="seound" ref={priceRef} onChange={(e)=>setSize(e.target.value)}>
                        {priceOptions.map((data)=>{
                         return <option key={data} value={data}>{data}</option>
                        })}
                     </select>
                     <div className="d-inline h-100 fs-5"> 
-                        total price
+                     {finalPrice}/-
                     </div>
                     <hr />
                     <button onClick={handleAddToCart} >add to cart</button>

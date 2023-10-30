@@ -47,10 +47,12 @@ const Foodcards = () => {
     return  <div>
         <div className="cardspage">
 
-        <div className="Bheader">
+            <Header/>
+
+        {/* <div className="Bheader"> */}
             
 
-<div className="head" style={{ backgroundImage: `url(${background})` }}>
+{/* <div className="head" style={{ backgroundImage: `url(${background})` }}>
 
 <header className='headernav'>
   
@@ -87,7 +89,17 @@ const Foodcards = () => {
 </div>              
 </div>
         
-        </div>
+        </div> */}
+
+<div className="search-place">
+         
+         {/* <img className="location" src="../Images/location.png" alt=""/>
+         <p>abca e akdjfak rls jaj</p> */}
+         
+         <img className="HeaderSearchImg" src="../Images/search.png" alt=""/>
+         <input type="search" className='HeaderSearchInput'  placeholder="search for resturant,cuisine or a dish" value={search} onChange={(e)=>{setSearch(e.target.value)}}/>     
+            
+  </div>
        
         <div className="container cardmain"> 
             {

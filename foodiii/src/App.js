@@ -10,11 +10,11 @@ import {
 import Login from './Screens/Login';
 import Signup from './Screens/Signup';
 import Foodcards from './Screens/Foodcards';
-// import { CartProvider } from './Component/ContextReducer';
+import { CartProvider } from './Component/ContextReducer';
 
 function App() {
   return (
-    // <CartProvider>
+    <CartProvider>
     <Router>
     <div>
       <Routes>
@@ -25,7 +25,7 @@ function App() {
       </Routes>
     </div>
     </Router>
-        // </CartProvider>
+      </CartProvider>
   );
 }
 
