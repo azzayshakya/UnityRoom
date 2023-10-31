@@ -1,14 +1,16 @@
 import React from 'react';
-// import React from 'react'
-// import Delete from '@material-ui/icons/Delete'
-// import { useCart, useDispatchCart } from '../components/ContextReducer';
+
+import { Delete } from '@mui/icons-material';
+
 import { useCart, useDispatchCart } from '../Component/ContextReducer';
-// import trash from "../trash.svg"
+
 
 const Cart = () => {
 
     let data = useCart();
+
     let dispatch = useDispatchCart();
+    
     if (data.length === 0) {
       return (
         <div>
@@ -16,31 +18,31 @@ const Cart = () => {
         </div>
       )
     }
-    const handleRemove = (index)=>{
-      console.log(index)
-      dispatch({type:"REMOVE",index:index})
-    }
+    // const handleRemove = (index)=>{
+    //   console.log(index)
+    //   dispatch({type:"REMOVE",index:index})
+    // }
   
     const handleCheckOut = async () => {
-      let userEmail = localStorage.getItem("userEmail");
-      // console.log(data,localStorage.getItem("userEmail"),new Date())
-      let response = await fetch("http://localhost:5000/api/auth/orderData", {
-        // credentials: 'include',
-        // Origin:"http://localhost:3000/login",
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          order_data: data,
-          email: userEmail,
-          order_date: new Date().toDateString()
-        })
-      });
-      console.log("JSON RESPONSE:::::", response.status)
-      if (response.status === 200) {
-        dispatch({ type: "DROP" })
-      }
+    //   let userEmail = localStorage.getItem("userEmail");
+    //   // console.log(data,localStorage.getItem("userEmail"),new Date())
+    //   let response = await fetch("http://localhost:5000/api/orderData", {
+    //     // credentials: 'include',
+    //     // Origin:"http://localhost:3000/login",
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify({
+    //       order_data: data,
+    //       email: userEmail,
+    //       order_date: new Date().toDateString()
+    //     })
+    //   });
+    //   console.log("JSON RESPONSE:::::", response.status)
+    //   if (response.status === 200) {
+    //     dispatch({ type: "DROP" })
+    //   }
     }
   
     let totalPrice = data.reduce((total, food) => total + food.price, 0)
@@ -56,10 +58,10 @@ const Cart = () => {
               <th scope='col' >Quantity</th>
               <th scope='col' >Option</th>
               <th scope='col' >Amount</th>
-              <th scope='col' ></th>
+              <th scope='col' >Delete</th>
             </tr>
           </thead>
-          {/* <tbody>
+          <tbody className='ajjuxn'>
             {data.map((food, index) => (
               <tr>
                 <th scope='row' >{index + 1}</th>
@@ -67,11 +69,16 @@ const Cart = () => {
                 <td>{food.qty}</td>
                 <td>{food.size}</td>
                 <td>{food.price}</td>
-                <td ><button type="button" className="btn p-0"><Delete onClick={() => { dispatch({ type: "REMOVE", index: index }) }} /></button> </td></tr>
+                <td ><button type="button" className="btn p-0">
+                    
+                    <Delete onClick={() => { dispatch({ type: "REMOVE", index: index }) }} />
+                
+                </button> 
+                </td></tr>
             ))}
-          </tbody> */}
+          </tbody>
         </table>
-        <div><h1 className='fs-2'>Total Price: {totalPrice}/-</h1></div>
+        <div className='windowtotalprice'><h1 className='fs-2'>Total Price: {totalPrice}/-</h1></div>
         <div>
           <button className='btn bg-success mt-5 ' onClick={handleCheckOut} > Check Out </button>
         </div>

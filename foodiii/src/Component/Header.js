@@ -7,6 +7,7 @@ import { Badge } from 'react-bootstrap-v5';
 import Cart from '../Screens/Cart';
 // import Modal from '../Modal';
 import Modal from '../Modal';
+import { useCart } from './ContextReducer';
 // import Cart from "..Screens/Cart";
 // import location from "../Images/location.png";
 // import search from "../Images/search.png";
@@ -15,6 +16,7 @@ import Modal from '../Modal';
 const Header = () => {
 
     const [cartView,setCartView] = useState(false);
+    let data = useCart();
     const navigate = useNavigate();
 
     const handleLogout = () => {
@@ -56,7 +58,7 @@ const Header = () => {
                                 <div className="efg"  onClick={()=>{setCartView(true)}}>
                                     <li>Cart <Link to=""></Link></li>
                                     
-                                    <Badge pill bg="danger">2</Badge>
+                                    <Badge pill bg="danger">{data.length}</Badge>
                                 </div>
 
                                 {cartView? <Modal onClose={()=>setCartView(false)}><Cart/></Modal>:null}
