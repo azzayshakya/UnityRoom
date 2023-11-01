@@ -10,8 +10,7 @@
     margin-left: 35px;
     border-bottom: 1px grey solid;
     /* border-top: 1px solid grey; */
-
-
+    
 }
 
 .footer .first {
@@ -133,4 +132,6 @@
 .copyright{
     margin: 20px 35px ;
     color: grey;
+    margin-top: 100px;
+    border-top: 1px solid black;
 }

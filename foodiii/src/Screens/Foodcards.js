@@ -107,12 +107,16 @@ const Foodcards = () => {
                     ? foodCat.map((data) => {
                         return (
                             <div className='row mb-3 a1' >
-                                <div key={data._id} className='fs-3 m-3 a2' >
+                                <div key={data._id} className='fs-3 m-3 a2 ' >
+                                    <div className="CategoryName">
                                     {data.CategoryName}
+
+                                    </div>
+                                    
                                   
 
                                 </div>
-                                <hr />
+                                {/* <hr /> */}
 
                                
                                 {
@@ -126,14 +130,9 @@ const Foodcards = () => {
                                                 
                                                 <Newcard foodItems={filterItem}
                                                 options={filterItem.options[0]}
-                                                >
-                                                
-                                                </Newcard>
-                                                
-                                                   
-                                                   
+                                                >                                                
+                                                </Newcard>         
                                                 </div>
-
 
                                             )
 

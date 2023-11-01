@@ -5,7 +5,7 @@ import React from 'react';
 const Footer = () => {
     return <div>
          
-      <div class="footer">
+      {/* <div class="footer">
     <div class="first">
         <h1>Zomato</h1>
         <div class="india">
@@ -68,16 +68,13 @@ const Footer = () => {
 
     
 
-</div>
+</div> */}
 
 
 <div class="copyright">
-    By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2023 © Zomato™ Ltd. All rights reserved.
+    By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2023 © Foodiii™ Ltd. All rights reserved.
 </div>
-
-
-
-    </div>;
+</div>;
 }
 
 

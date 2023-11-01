@@ -36,8 +36,6 @@ const Newcard = (props) => {
     //     await dispatch ({type:"UPDATE",id:foodItem._id,price:finalPrice,qty:qty})
     //     return
     //   }
-
-
     // }
 
 
@@ -89,8 +87,8 @@ const Newcard = (props) => {
 
   // console.log(priceOptions)
   return <div>
-    <div class="card mt-3" style={{ "width": "18rem", "maxHeight": "500px" }}  >
-      <div className="B-image" >
+    <div class="card mt-3 cardmainhover" style={{ "width": "18rem", "maxHeight": "500px" }}  >
+      <div className="B-image " >
         <img src={props.foodItems.img} style={{
           height: "180px",
           width: "100%",
@@ -106,7 +104,7 @@ const Newcard = (props) => {
                 borderTopRightRadius:"20px"
                }} src="../Images/service-1.jpg" alt="" />  */}
       </div>
-      <div class="card-body">
+      <div class="card-body ">
         <h5 class="card-title">{props.foodItems.name}</h5>
         <div className="container w-100">
           <select name="" className='m-2 h-100 bg-success rounded' id="" onChange={(e) => setQty(e.target.value)}>{
@@ -125,8 +123,8 @@ const Newcard = (props) => {
           <div className="d-inline h-100 fs-5">
             {finalPrice}/-
           </div>
-          <hr />
-          <button onClick={handleAddToCart} >add to cart</button>
+          <hr className='hrtag'/>
+          <button className='addtocartbutton' onClick={handleAddToCart} >Add To Cart</button>
         </div>
 
       </div>

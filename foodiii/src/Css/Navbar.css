@@ -3,6 +3,14 @@
     padding: 0px;
     box-sizing: border-box;
   }
+
+.mainNvbar{
+    /* border: 2px blue solid; */
+    margin-top: -9px;
+    margin-left: -16px;
+
+
+}
 .headermain{
     display: flex;
     justify-content: space-between;
@@ -10,7 +18,7 @@
     color: white;
     font-size: 16px;
 
-    border: 2px red solid;
+    /* border: 2px red solid; */
     width: 1250px;
    
     padding: 25px 0px 20px 20px;

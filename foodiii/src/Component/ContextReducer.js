@@ -30,9 +30,9 @@ const reducer=(state,action)=>{
                 return arr
 
                 
-            // case "DROP":
-            //     let empArray = []
-            //     return empArray
+            case "DROP":
+                let empArray = []
+                return empArray
 
 
         default:

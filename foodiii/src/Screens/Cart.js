@@ -14,35 +14,34 @@ const Cart = () => {
     if (data.length === 0) {
       return (
         <div>
-          <div className='m-5 w-100 text-center fs-3'>The Cart is Empty!</div>
+          <div className='m-5 w-100 text-center fs-3 ajjuxn'>The Cart is Empty!</div>
         </div>
       )
     }
-    // const handleRemove = (index)=>{
-    //   console.log(index)
-    //   dispatch({type:"REMOVE",index:index})
-    // }
+    const handleRemove = (index)=>{
+      console.log(index)
+      dispatch({type:"REMOVE",index:index})
+    }
   
     const handleCheckOut = async () => {
-    //   let userEmail = localStorage.getItem("userEmail");
-    //   // console.log(data,localStorage.getItem("userEmail"),new Date())
-    //   let response = await fetch("http://localhost:5000/api/orderData", {
-    //     // credentials: 'include',
-    //     // Origin:"http://localhost:3000/login",
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify({
-    //       order_data: data,
-    //       email: userEmail,
-    //       order_date: new Date().toDateString()
-    //     })
-    //   });
-    //   console.log("JSON RESPONSE:::::", response.status)
-    //   if (response.status === 200) {
-    //     dispatch({ type: "DROP" })
-    //   }
+      // let userEmail = localStorage.getItem("userEmail");
+      
+      // let response = await fetch("http://localhost:5000/api/orderData", {
+   
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      //   body: JSON.stringify({
+      //     order_data: data,
+      //     email: userEmail,
+      //     order_date: new Date().toDateString()
+      //   })
+      // });
+      // console.log("JSON RESPONSE:::::", response.status)
+      // if (response.status === 200) {
+      //   dispatch({ type: "DROP" })
+      // }
     }
   
     let totalPrice = data.reduce((total, food) => total + food.price, 0)

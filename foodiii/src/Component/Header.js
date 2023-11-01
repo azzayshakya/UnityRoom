@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 
 import Css from '../Css/Header.css'
 import background from "../Images/zomatoHead.webp";
+import Imageslogo from '../Images/logo.png'
+
 import { Badge } from 'react-bootstrap-v5';
 import Cart from '../Screens/Cart';
 // import Modal from '../Modal';
@@ -29,15 +31,15 @@ const Header = () => {
         <div className="head" style={{ backgroundImage: `url(${background})` }}>
 
             <header className='headernav'>
-                <h4 className="icon">
-                    Get the app
+                <h4 className="icon" >
+                  
                 </h4>
                 <div>
                     <ol>
-                        <li><Link className='link' to="/">Home</Link></li>
+                        <li><Link className='link myOrder' to="/">Home</Link></li>
 
                         {(localStorage.getItem("authToken")) ?
-                            <li><Link className='' to="">My Orders</Link></li>
+                            <li><Link className='link myOrder' to="/myOrder">My Orders</Link></li>
 
                             : " "}
 
@@ -50,15 +52,12 @@ const Header = () => {
 
                             : <div className='cde'>
                                 <div onClick={handleLogout}>
-                                <li>Log Out <Link to=""></Link></li>
+                                <li> <Link to="" className='link myOrder'>Log Out</Link></li>
+                            </div>
 
-
-                                </div>
-
-                                <div className="efg"  onClick={()=>{setCartView(true)}}>
-                                    <li>Cart <Link to=""></Link></li>
-                                    
-                                    <Badge pill bg="danger">{data.length}</Badge>
+                                <div className="efg asdf"  onClick={()=>{setCartView(true)}}>
+                                    <li>Cart <Link to=""></Link></li>                            
+                                    <Badge pill bg="danger cartBadge">{data.length}</Badge>
                                 </div>
 
                                 {cartView? <Modal onClose={()=>setCartView(false)}><Cart/></Modal>:null}
@@ -69,6 +68,7 @@ const Header = () => {
             </header>
             <div className="mid">
                 <h1>Foodiii</h1>
+                <h3 className='headertag'>Anything, anytime, anywhere. We deliver it all.</h3>
                 {/* <h3> Discover the best food & drinks in Delhi NCR </h3>
                 <div className="search-place">
 

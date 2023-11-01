@@ -48,10 +48,19 @@
     background-color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-bottom: 1px grey solid;
+    color: black;
+    text-align: center;
     
 
 
 } 
+.services .about span{
+    color: black;
+}
+.services .about :hover{
+    color: red;
+}
+
 .services span{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 0.6px;

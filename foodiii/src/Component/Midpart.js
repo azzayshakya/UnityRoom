@@ -1,5 +1,4 @@
 import Css from '../Css/Midpart.css'
-// import Images from '../Images/service-1.jpg'
 import React from 'react';
 import {Link} from 'react-router-dom'
 
@@ -13,22 +12,26 @@ const Midpart = () => {
             <div className="about">
                 <Link to="/foodcards">
                 <span>Order Online</span><br />
+                <span>
                 stay home and order to your...
+                </span>
                 </Link>
             </div>
         </div>
 
-        <div>
-            <div className="image">
-                <img className="bc" src="../Images/service-2.jpg" alt=""/>
+        <div  >
+            <div className="image"  >
+                <img style={{ "filter":" blur(5px)" ,"overflow":"hidden"  }} className="bc" src="../Images/service-2.jpg" alt=""/>
                
             </div>
-            <div className="about">
+            <div className="about" style={{"zIndex":"100"}}>
                 <span>Rooms</span>
-                view the city's favourite d..
+                
+                
+                Currently working on this functionality..
             </div>
         </div>
-        <div>
+        {/* <div>
             <div className="image">
                 <img className="cd" src="../Images/clubs.jpg" alt=""/> 
 
@@ -37,10 +40,10 @@ const Midpart = () => {
                 <span>Nightlife and Clubs</span>
                 Expore the city's top night...
             </div>
-        </div>
+        </div> */}
     </div>
 
-
+{/* 
 
     <div className="collections">
         <h1>
@@ -126,9 +129,9 @@ const Midpart = () => {
             <div>See <br/> <span>More</span><img src="../Images/right-arrow-black.png" alt=""/></div>
         </div>
 
-    </div>
+    </div> */}
 
-
+{/* 
     <div className="download">
 
         <div className="left">
@@ -154,9 +157,9 @@ const Midpart = () => {
         </div>
 
 
-    </div>
+    </div> */}
 
-    <div className="explore-near-me">
+    {/* <div className="explore-near-me">
         <h1>Explore options near me</h1>
         <div className="boxes">
 
@@ -166,9 +169,9 @@ const Midpart = () => {
         <div>Cities we Deliver To <img src="../Images/right-arrow-black.png" alt=""/></div>
 
 
-        </div>
+        </div> */}
         
-    </div>
+    {/* </div> */}
     </div>;
 }
 

@@ -66,6 +66,14 @@ li{
     display: inline-block;
 }
 
+.myOrder:hover{
+    color: white;
+    /* text-decoration: none; */
+    
+
+}
+
+
 .cde{
     display: flex;
     float: right;
@@ -79,7 +87,24 @@ li{
     border-radius: 5px;
     color: white;
 }
+.op{
+    display: inline-block;
+    
+}
+.asdf{
+    /* border: 2px red solid; */
+    background-color: red;
+    margin-right: 10px;
+    border-radius: 5px;
 
+}
+.cartBadge{
+    margin-left: -25px;
+    font-size: 15px;
+    cursor: pointer;
+    
+
+}
 
 
 .search-place{
@@ -99,6 +124,8 @@ li{
     margin-top: 40px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+
+
 
 
  .search-place .location{
@@ -179,4 +206,8 @@ li{
 
   .windowtotalprice h1{
     color: white;
+  }
+
+  .headertag {
+    
   }
