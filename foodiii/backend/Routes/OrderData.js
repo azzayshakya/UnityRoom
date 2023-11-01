@@ -5,7 +5,7 @@ const Order =require("../models/Orders")
 
 router.post('/orderData',async(req,res)=>{
     let data =req.body.order_data
-    await data.splice(0,0,{Order_Data:req.body.order_data})
+    await data.unshift({ Order_date: req.body.order_date });
 
     let eId = await Order.findOne({'email':req.body.email})
     console.log(eId)
@@ -20,7 +20,8 @@ router.post('/orderData',async(req,res)=>{
         }catch(error){
             // console.log(error)
                 console.log(error.message)
-                res.send("Server Error",error.message)
+                // res.send("Server Error",error.message)
+                res.status(500).send("Server Error: " + error.message);
             
         }
     }
@@ -32,18 +33,20 @@ router.post('/orderData',async(req,res)=>{
                 })
         }
         catch(error){
-            res.send("server Errror",error.message)
+            res.status(500).send("Server Error: " + error.message);
         }
     }
 })
 
 
-router.post('/myorderData',async(req,res)=>{
+router.post('/myOrderData',async(req,res)=>{
     try {
+        // console.log("ajju is");
         let myData=await Order.findOne({'email':req.body.email})
         res.json({orderdata:myData})
     } catch (error) {
         res.send("server Errror",error.message)
+        // console.log("ajju is here")
 
         
     }
