@@ -34,6 +34,14 @@
     text-decoration: none;
     color: white;
 }
+.link:hover{
+    color: red;
+}
+
+.ajjuis{
+    border: 2px solid red;
+}
+
 
 li{
     display: inline-block;
@@ -66,8 +74,9 @@ li{
     display: inline-block;
 }
 
+
 .myOrder:hover{
-    color: white;
+    color: red;
     /* text-decoration: none; */
     
 
@@ -211,3 +220,4 @@ li{
   .headertag {
     
   }
+  

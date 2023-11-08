@@ -78,7 +78,7 @@ const Login = () => {
           <a>Submit</a>
         </div>
         <div className="fotter">
-          <a>Forgot Password ?</a>
+          {/* <a>Forgot Password ?</a> */}
           <a><Link className="signuplink" to="/Signup">Signup</Link></a>
         </div>
       </div>
