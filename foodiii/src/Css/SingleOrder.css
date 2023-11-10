@@ -7,7 +7,20 @@
     border: 2px blue solid;
 }
 
+.maincontain{
+    border: 2px red solid;
+    width: 1230px;
+}
 
+.maincontain .date{
+   /* display: flex;
+   align-items: center; */
+   /* align-items: center; */
+   text-align: center;
+   font-size:40px;
+
+
+}
 .singleMainDate{
     /* border: 2px red solid; */
     margin-top:10px;
@@ -33,5 +46,6 @@
     /* border: 2px red solid; */
     width: 280px;
     font-size: 20px;
+    text-align: center;
     
 }
