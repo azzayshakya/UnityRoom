@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 
 import Css from '../Css/Header.css'
-import background from "../Images/zomatoHead.webp";
+import background from "../Images/collection-3.jpg";
 import Imageslogo from '../Images/logo.png'
 
 import { Badge } from 'react-bootstrap-v5';

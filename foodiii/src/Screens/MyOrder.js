@@ -102,7 +102,7 @@ const MyOrder = () => {
    return(<div>
 
     <Header/>
-          <h1 className='yourorderheading'>YOUR ORDERS..</h1>
+          <h3 className='yourorderheading'>YOUR ORDER HISTORY..</h3>
     
     <div>{
         
