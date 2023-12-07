@@ -6,9 +6,11 @@ const User=require('../models/User')
 
 router.post('/orderData',async(req,res)=>{
     let data =req.body.order_data
+    // console.log(order_data)
     await data.unshift({ Order_date: req.body.order_date });
 
     let eId = await Order.findOne({'email':req.body.email})
+
     let user=await User.findOne({email:req.body.email})
     console.log("user:",user)
     let array=[]

@@ -8,8 +8,9 @@ const MyOrder = () => {
 
     
     const [orderData, setOrderData] = useState([]); // Initialize with an empty object
-    
-    console.log(orderData)    
+    // console.log("this is your data")    
+    // console.log(orderData)
+      
 
     useEffect(() => {
         const fetchMyOrder = async () => {
@@ -106,7 +107,8 @@ const MyOrder = () => {
     
     <div className='qwer'>{
         
-        orderData &&(
+        // orderData &&
+        (
             <div>
 
 

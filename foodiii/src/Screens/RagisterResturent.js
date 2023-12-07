@@ -4,7 +4,7 @@ import background from "../Images/collections-4.jpg";
 import Navbar from '../Component/Navbar';
 import {Link,useNavigate } from 'react-router-dom'
 
-
+ 
 
 const RagisterResturent = () => {
     const[credentials , setcredentials] =useState({

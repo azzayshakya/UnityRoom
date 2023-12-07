@@ -18,10 +18,10 @@ const Cart = () => {
         </div>
       )
     }
-    const handleRemove = (index)=>{
-      console.log(index)
-      dispatch({type:"REMOVE",index:index})
-    }
+    // const handleRemove = (index)=>{
+    //   // console.log(index)
+    //   dispatch({type:"REMOVE",index:index})
+    // }
   
     const handleCheckOut = async () => {
       let userEmail = localStorage.getItem("userEmail");
@@ -41,7 +41,7 @@ const Cart = () => {
       });
       // console.log("ajay")
       // console.log(data)
-      console.log("JSON RESPONSE:::::", response.status)
+      // console.log("JSON RESPONSE:::::", response.status)
 
       if (response.status === 200) {
         dispatch({ type: "DROP" })
@@ -77,6 +77,7 @@ const Cart = () => {
                     <Delete onClick={() => { dispatch({ type: "REMOVE", index: index }) }} />
                 
                 </button> 
+                
                 </td></tr>
             ))}
           </tbody>
