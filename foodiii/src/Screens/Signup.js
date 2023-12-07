@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 import Css from '../Css/Signup.css'
+import background from "../Images/collections-4.jpg";
+
 import Footer from '../Component/Footer';
 import Navbar from '../Component/Navbar';
 import { Link } from 'react-router-dom';
 
 const Signup = () => {
 
-  const [credentials, setcredentials] = useState({ name: "", email: "", geolocation: "", password: "" })
+  const [credentials, setcredentials] = useState({ name: "", email: "", geolocation: "", password: "" ,MobileNo:""})
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(JSON.stringify({ name: credentials.name, email: credentials.email, location: credentials.geolocation, password: credentials.password }))
+    console.log(JSON.stringify({ name: credentials.name, email: credentials.email, location: credentials.geolocation, password: credentials.password,MobileNo: credentials.MobileNo}))
     const response = await fetch("http://localhost:5000/api/creatuser", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ name: credentials.name, email: credentials.email, location: credentials.geolocation, password: credentials.password })
+      body: JSON.stringify({ name: credentials.name, email: credentials.email, location: credentials.geolocation, password: credentials.password,MobileNo: credentials.MobileNo })
     });
     const json = await response.json();
     console.log(json);
@@ -28,7 +30,13 @@ const Signup = () => {
     setcredentials({ ...credentials, [event.target.name]: event.target.value })
 
   }
-  return <div>
+  return <div style={{
+    backgroundImage: `url(${background})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    height:"873px"
+
+}}>
     <div className="navbar"><Navbar /></div>
 
     <div className="main">
@@ -91,6 +99,18 @@ const Signup = () => {
 
             />
           </div>
+          <div className="input_group">
+            <i className="fa fa-unlock-alt"></i>
+            <input
+              placeholder="Mobile No."
+              className="input_text"
+              autocomplete="off"
+              name="MobileNo"
+              value={credentials.MobileNo}
+              onChange={handleNameChange}
+
+            />
+          </div>
           <div className="button_group" onClick={handleSubmit} id="login_button">
             <a>Submit</a>
           </div>
@@ -111,9 +131,9 @@ const Signup = () => {
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <div className="footer">
+    {/* <div className="footer">
       <Footer />
-    </div>
+    </div> */}
   </div>;
 }
 export default Signup;

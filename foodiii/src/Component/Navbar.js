@@ -1,17 +1,14 @@
 import React from 'react';
 import Css from '../Css/Navbar.css'
 import { Link } from 'react-router-dom'
-import background from "../Images/zomatoHead.webp";
+import background from "../Images/collection-3.jpg";
+
 
 
 const Navbar = () => {
-    return <div>
+    return <div >
         <div className="mainNvbar">
-        <header className="headermain" style={{
-            backgroundImage: `url(${background})`,
-            backgroundPosition: "center"
-        }}>
-
+        <header className="headermain" >
 
             <h4 className="icon">
                 Get the app
@@ -21,6 +18,8 @@ const Navbar = () => {
                 {/* <li>Add resturant <Link to=""></Link></li> */}
                 <li><Link className='link myOrder' to="/login">Login</Link></li>
                 <li><Link className='link myOrder' to="/Signup">Sign up</Link></li>
+                <li><Link className='link ' to="/RagisterResturent">Your_Resturent</Link></li>
+
 
             </ol>
         </header>

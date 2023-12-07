@@ -3,14 +3,18 @@
     margin-top: 20px;
     
 }
+.qwer{
+    background-color: #676971;
+}
 
-.mmm{
+    .mmm{
     border: 2px blue solid;
 }
 
 .maincontain{
     margin-top: 50px;
     padding-bottom: 50px;
+    
     border: 2px rgb(172, 170, 170) solid;
 
     width: 1230px;

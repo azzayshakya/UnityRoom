@@ -22,9 +22,24 @@ const Header = () => {
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        localStorage.removeItem("authToken")
-        navigate("/login")
+        console.log("authtoken1")
+        console.log(localStorage.getItem("authToken"))
+        console.log("authtoken2")
 
+        console.log(localStorage.getItem("authToken2"))
+
+
+        localStorage.removeItem("authToken")
+        localStorage.removeItem("authToken2")
+
+
+        // console.log("random value")
+        // console.log(localStorage.getItem("resturentId"))
+        // localStorage.removeItem("randomNumber")
+        
+
+        navigate("/login")
+        
     };
     return <div>
 
@@ -37,6 +52,20 @@ const Header = () => {
                 <div>
                     <ol>
                         <li><Link className='link myOrder' to="/">Home</Link></li>
+                        {(!localStorage.getItem("authToken2")) ?
+                            <li><Link className='link myOrder' to="/RagisterResturent">Your_Resturent</Link></li>
+
+
+                            : " "}
+
+
+                        {(localStorage.getItem("authToken2")) ?
+                            <li><Link className='link myOrder' to="/RestOrder">Resturent_Orders</Link></li>
+
+                            : " "}
+
+
+                        
 
                         {(localStorage.getItem("authToken")) ?
                             <li><Link className='link myOrder' to="/myOrder">My Orders</Link></li>

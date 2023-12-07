@@ -1,13 +1,35 @@
 const express = require("express")
 const router = express.Router();
-const Order =require("../models/Orders")
-
+const Order =require("../models/Orders");
+const Order4r=require('../models/Order4rest');
+const User=require('../models/User')
 
 router.post('/orderData',async(req,res)=>{
     let data =req.body.order_data
     await data.unshift({ Order_date: req.body.order_date });
 
     let eId = await Order.findOne({'email':req.body.email})
+    let user=await User.findOne({email:req.body.email})
+    console.log("user:",user)
+    let array=[]
+    for(let i=0;i<data.length;i++){
+        let obj={};
+        obj.email=req.body.email
+        obj.MobileNo=user.MobileNo
+
+        console.log(data[i])
+        helpObj={}
+        helpObj.id=data[i].id
+        helpObj.name=data[i].name
+        helpObj.qty=data[i].qty
+        helpObj.size=data[i].size
+        helpObj.price=data[i].price
+
+        obj.order=helpObj
+
+        array.push(obj);
+    }
+    await Order4r.insertMany(array);
     console.log(eId)
     if(eId===null){
         try{

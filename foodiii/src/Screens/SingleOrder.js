@@ -3,6 +3,8 @@ import Css from '../Css/SingleOrder.css'
 
 
 const SingleOrder = ({ items }) => {
+    console.log(items)
+    
     const date = items[0].Order_date
     console.log(date)
     return (<div>

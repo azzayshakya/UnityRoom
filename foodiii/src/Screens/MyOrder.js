@@ -104,7 +104,7 @@ const MyOrder = () => {
     <Header/>
           <h3 className='yourorderheading'>YOUR ORDER HISTORY..</h3>
     
-    <div>{
+    <div className='qwer'>{
         
         orderData &&(
             <div>

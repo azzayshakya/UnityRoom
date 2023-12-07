@@ -2,15 +2,7 @@ const mongoose = require('mongoose')
 
 const{Schema} = mongoose;
 const UserSchema = new Schema({
-    name:{
-        type:String,
-        required:true
-    },
-    location:{
-        type:String,
-        required:true
-    },
-    email:{
+    resturentId:{
         type:String,
         required:true
     },
@@ -22,12 +14,8 @@ const UserSchema = new Schema({
         type:Number,
         required:true
     },
-    date:{
-        type:Date,
-        default:Date.now
-    }
     
 
 });
 
-module.exports =mongoose.model("User" ,UserSchema);
+module.exports =mongoose.model("resturent" ,UserSchema);

@@ -5,12 +5,15 @@
   }
 
 .mainNvbar{
-    /* border: 2px blue solid; */
+
     margin-top: -9px;
     margin-left: -16px;
+    margin-bottom: -8px;
+    /* border: 2px red solid; */
 
 
 }
+
 .headermain{
     display: flex;
     justify-content: space-between;
@@ -19,7 +22,8 @@
     font-size: 16px;
 
     /* border: 2px red solid; */
-    width: 1250px;
+    width: 1263px;
+    /* width: 100%; */
    
     padding: 25px 0px 20px 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

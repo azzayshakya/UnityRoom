@@ -13,6 +13,10 @@ const fetchFoodItems = async () => {
       const foodCategory = await mongoose.connection.db.collection("foodCategory");
       const catdata = await foodCategory.find({}).toArray();
       // console.log(catdata)
+
+      const ResturentUsers = await mongoose.connection.db.collection("Resturent");
+      const resturentUser = await ResturentUsers.find({}).toArray();
+      
       global.foodCategory=catdata;
       // console.log(global.foodCategory)
     //   console.log("printing the collection data")

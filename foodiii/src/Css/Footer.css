@@ -127,11 +127,22 @@
     width: 160px;
 
 
+}
+.uppercopyright{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4);
+    width: 1266px;
+    position: absolute;
+    left: 0px;
+
+
 } 
 
 .copyright{
-    margin: 20px 35px ;
-    color: grey;
-    margin-top: 100px;
+    margin: 20px 0px ;
+    /* color: grey; */
+    /* margin-top: 100px; */
     border-top: 1px solid black;
+    /* width: 100%; */
+    
 }

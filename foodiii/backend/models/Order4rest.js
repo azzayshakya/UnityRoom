@@ -6,13 +6,15 @@ const OrderSchema = new Schema({
     email: {
         type: String,
         required: true,
-        unique: true
     },
-    order_data: {
-        type: Array,
+    order: {
+        type: Object,
         required: true,
     },
-    
+    MobileNo:{
+        type: Number,
+        required:true
+    },
     date:{
         type:Date,
         default:Date.now
@@ -20,4 +22,4 @@ const OrderSchema = new Schema({
 
 });
 
-module.exports = mongoose.model('order', OrderSchema)
+module.exports = mongoose.model('order4r', OrderSchema)

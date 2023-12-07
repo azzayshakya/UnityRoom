@@ -2,12 +2,12 @@ import React, { useState} from 'react';
 import Footer from '../Component/Footer';
 import Navbar from '../Component/Navbar';
 import Css from '../Css/Login.css'
+import background from "../Images/collections-4.jpg";
 
 import {Link,useNavigate } from 'react-router-dom'
 const Login = () => {
   const[credentials , setcredentials] =useState({email:"", password:""})
   let navigate=useNavigate();
-
   const handleSubmit=async(e) =>{
     e.preventDefault();
     console.log(JSON.stringify({email:credentials.email,password:credentials.password}))
@@ -28,6 +28,10 @@ const Login = () => {
 
       localStorage.setItem("authToken",json.authToken)
       console.log(localStorage.getItem("authToken"))
+      
+
+      
+
        navigate("/");
     }
 
@@ -38,7 +42,13 @@ const Login = () => {
   }
 
 
-    return (<div>
+    return (<div style={{
+      backgroundImage: `url(${background})`,
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      height:"790px"
+
+  }}>
       <div className="navbar"><Navbar/></div>
 
       <div className="main">    
@@ -92,9 +102,11 @@ const Login = () => {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
-    <div className="footer">
+    {/* <div className="footer " style={{
+      marginTop:"166px"
+    }}>
     <Footer/>
-    </div>
+    </div> */}
 
 
 
