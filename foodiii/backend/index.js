@@ -6,6 +6,10 @@ const port = 5000
 const mongoDB =require("./db")
 mongoDB();
 
+
+
+
+
 app.get('/', (req, res) => {
   res.send('ajay')
 
