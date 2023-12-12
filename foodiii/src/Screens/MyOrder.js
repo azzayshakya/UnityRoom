@@ -26,8 +26,13 @@ const MyOrder = () => {
                 });
         
                 if (response.ok) {
+
+                    
+                    
                     const data = await response.json();
+                    
                     let array=data.orderdata.order_data
+                    console.log(array)
                     array=array.reverse()
                     setOrderData(array);
                 } else {
@@ -120,9 +125,7 @@ const MyOrder = () => {
                 
                 return <li  key={index}>
                     
-                    
-                     
-                     
+                                                        
                         <SingleOrder items={items}/>
                        
                        

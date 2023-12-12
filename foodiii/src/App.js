@@ -10,7 +10,6 @@ import {
 import Login from './Screens/Login';
 import Signup from './Screens/Signup';
 import Foodcards from './Screens/Foodcards';
-import { CartProvider } from './Component/ContextReducer';
 import MyOrder from './Screens/MyOrder';
 import RagisterResturent from './Screens/RagisterResturent';
 import RestOrder from './Screens/RestOrder';
@@ -18,7 +17,6 @@ import RestOrder from './Screens/RestOrder';
 
 function App() {
   return (
-    <CartProvider>
     <Router>
     <div>
       <Routes>
@@ -35,7 +33,6 @@ function App() {
       </Routes>
     </div>
     </Router>
-      </CartProvider>
   );
 }
 

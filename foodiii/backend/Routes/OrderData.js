@@ -8,18 +8,20 @@ router.post('/orderData',async(req,res)=>{
     let data =req.body.order_data
     // console.log(order_data)
     await data.unshift({ Order_date: req.body.order_date });
+    // console.log("ajay aur what")
+    //     console.log(data)
 
     let eId = await Order.findOne({'email':req.body.email})
 
     let user=await User.findOne({email:req.body.email})
-    console.log("user:",user)
+    // console.log("user:",user)
     let array=[]
     for(let i=0;i<data.length;i++){
         let obj={};
         obj.email=req.body.email
         obj.MobileNo=user.MobileNo
 
-        console.log(data[i])
+        // console.log(data[i])
         helpObj={}
         helpObj.id=data[i].id
         helpObj.name=data[i].name
@@ -30,9 +32,12 @@ router.post('/orderData',async(req,res)=>{
         obj.order=helpObj
 
         array.push(obj);
+        
     }
     await Order4r.insertMany(array);
-    console.log(eId)
+    // console.log(eId)
+
+
     if(eId===null){
         try{
             await Order.create({

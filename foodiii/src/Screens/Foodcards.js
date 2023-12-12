@@ -32,7 +32,7 @@ const Foodcards = () => {
         response = await response.json();
 
 
-        console.log(response[0],response[1])
+        // console.log(response[0],response[1])
 
 
 

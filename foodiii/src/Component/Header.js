@@ -9,7 +9,7 @@ import { Badge } from 'react-bootstrap-v5';
 import Cart from '../Screens/Cart';
 // import Modal from '../Modal';
 import Modal from '../Modal';
-import { useCart } from './ContextReducer';
+// import { useCart } from './ContextReducer';
 // import Cart from "..Screens/Cart";
 // import location from "../Images/location.png";
 // import search from "../Images/search.png";
@@ -18,7 +18,8 @@ import { useCart } from './ContextReducer';
 const Header = () => {
 
     const [cartView,setCartView] = useState(false);
-    let data = useCart();
+    // let data = useCart();
+    let data=[]
     const navigate = useNavigate();
 
     const handleLogout = () => {

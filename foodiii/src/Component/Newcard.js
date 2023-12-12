@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useDispatchCart, useCart } from '../Component/ContextReducer';
-const propTypes = {};
+// import { useDispatchCart, useCart } from '../Component/ContextReducer';
 
 
 
@@ -8,11 +7,11 @@ const propTypes = {};
 
 
 const Newcard = (props) => {
-  let data = useCart();
+  let data = [];
 
 
   let foodItem = props.foodItems;
-  let dispatch = useDispatchCart();
+  // let dispatch = useDispatchCart();
 
   let options = props.options;
   let priceOptions = Object.keys(options);
@@ -20,64 +19,11 @@ const Newcard = (props) => {
   const [qty, setQty] = useState(1)
   const [size, setSize] = useState("")
 
-  const handleAddToCart =async()=>{
+  const handleAddToCart =async()=>{}
 
 
 
-    // let food =[];
-    // for(const item of data){
-    //   if (item.id===props.foodItem._id){
-    //     food =item;
-    //     break;
-    //   }
-    // }
-    // if(food!==[]){
-    //   if(food.size===size){
-    //     await dispatch ({type:"UPDATE",id:foodItem._id,price:finalPrice,qty:qty})
-    //     return
-    //   }
-    // }
-
-
-    await dispatch({type:"ADD",id:props.foodItems._id,
-    name:props.foodItems.name,
-    price:finalPrice,qty:qty,size:size})
-    console.log(data)
-  }
-
-
-  // const handleAddToCart = async () => {
-
-
-
-  //   let food = [];
-  //   for (const item of data) {
-  //     if (item.id === props.foodItem._id) {
-  //       food = item;
-  //       break;
-  //     }
-  //   }
-  //   if (food !== []) {
-  //     if (food.size === size) {
-  //       await dispatch({ type: "UPDATE", id:props.foodItem._id, price: finalPrice, qty: qty })
-  //       return
-  //     }
-  //     else if (food.size !== size) {
-  //       await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, price: finalPrice, qty: qty, size: size})
-  //       return
-  //       // console.log("Size different so simply ADD one more to the list")
-  //     }
-  //     return
-  //   }
-  //       await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, price: finalPrice, qty: qty, size: size })
-  // }
-
-
-  // await dispatch({type:"ADD",id:props.foodItems._id,
-  // name:props.foodItems.name,
-  // price:finalPrice,qty:qty,size:size})
-  // console.log(data)
-
+    
 
   let finalPrice = qty * parseInt(options[size]);
   useEffect(() => {
@@ -95,14 +41,7 @@ const Newcard = (props) => {
           borderTopLeftRadius: "5px",
           borderTopRightRadius: "5px"
         }} alt="" />
-        {/*         
-                <img style={{
-                
-                height:"180px",
-                width:"100%",
-                borderTopLeftRadius:"20px",
-                borderTopRightRadius:"20px"
-               }} src="../Images/service-1.jpg" alt="" />  */}
+        
       </div>
       <div class="card-body ">
         <h5 class="card-title">{props.foodItems.name}</h5>
@@ -133,5 +72,4 @@ const Newcard = (props) => {
 
   </div>;
 }
-Newcard.propTypes = propTypes;
 export default Newcard;

@@ -2,14 +2,13 @@ import React from 'react';
 
 import { Delete } from '@mui/icons-material';
 
-import { useCart, useDispatchCart } from '../Component/ContextReducer';
-
+// import { useCart, useDispatchCart } from '../store/ContextReducer';
+import {useSelector} from 'react-redux';
 
 const Cart = () => {
 
-    let data = useCart();
-
-    let dispatch = useDispatchCart();
+    const data=useSelector(state=>state);
+    console.log(data)
     
     if (data.length === 0) {
       return (
@@ -25,15 +24,21 @@ const Cart = () => {
   
     const handleCheckOut = async () => {
       let userEmail = localStorage.getItem("userEmail");
-      // console.log(userEmail)
+      // console.log(" azzay is here kdhafhidshfahshdfihsai")
+      // console.log(data)
+         
       
       let response = await fetch("http://localhost:5000/api/orderData", {
-   
+        
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
+
+
         body: JSON.stringify({
+
+        
           order_data: data,
           email: userEmail,
           order_date: new Date().toDateString()
@@ -43,15 +48,14 @@ const Cart = () => {
       // console.log(data)
       // console.log("JSON RESPONSE:::::", response.status)
 
-      if (response.status === 200) {
-        dispatch({ type: "DROP" })
-      }
+      // if (response.status === 200) {
+      //   dispatch({ type: "DROP" })
+      // }
     }
   
     let totalPrice = data.reduce((total, food) => total + food.price, 0)
+    console.log(data);
     return <div>
-
-{console.log(data)}
       <div className='container m-auto mt-5 table-responsive  table-responsive-sm table-responsive-md' >
         <table className='table table-hover '>
           <thead className=' text-success fs-4'>
@@ -60,6 +64,7 @@ const Cart = () => {
               <th scope='col' >Name</th>
               <th scope='col' >Quantity</th>
               <th scope='col' >Option</th>
+              <th scope='col' >img</th>
               <th scope='col' >Amount</th>
               <th scope='col' >Delete</th>
             </tr>
@@ -71,15 +76,21 @@ const Cart = () => {
                 <td >{food.name}</td>
                 <td>{food.qty}</td>
                 <td>{food.size}</td>
+                <td>
+                <img src={food.img} alt={food.name} style={{ maxWidth: '50px', maxHeight: '50px' }} /></td>
                 <td>{food.price}</td>
+
+                
+                 
                 <td ><button type="button" className="btn p-0">
                     
-                    <Delete onClick={() => { dispatch({ type: "REMOVE", index: index }) }} />
+                    <Delete />
                 
                 </button> 
                 
                 </td></tr>
             ))}
+            
           </tbody>
         </table>
         <div className='windowtotalprice'><h1 className='fs-2'>Total Price: {totalPrice}/-</h1></div>
