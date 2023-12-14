@@ -1,0 +1,185 @@
+ *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.cardspage{
+    /* border: 2px red solid; */
+    /* min-height: 4000px;  */
+}
+
+.Bnavbar{
+    /* border: 2px  green solid; */
+     height: 80px;
+    width:1280px; 
+ }
+
+
+ /* .card{
+    border: 2px red solid;
+    border-top: 10px;
+ } 
+ 
+ */
+ .cardmainhover:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+
+ }
+
+
+ .Bcardmain{
+    /* border: 2px red solid; */
+     margin-top: 75px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 1260px;
+    
+    /* flex-direction: column; */
+
+
+ }
+
+ .Bfooter{
+    position:relative;
+    bottom: 0;
+    left: 0;
+    
+   
+ }
+ .a1{   
+    margin-top: 40px;
+    /* border: 2px red solid; */
+
+
+ }
+ .a2{
+    /* border: 2px  blue solid; */
+    width: 100%;
+
+
+ }
+ .b1{
+    /* border: 2px  green solid; */
+    border-radius: 20px;
+    
+
+
+ }
+
+ .addtocartbutton{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 7px 8px;
+    border-radius: 10px ;
+    cursor: pointer;
+    
+ }
+ .addtocartbutton:hover{
+    /* box-shadow: 10px 10px 10px 10px; */
+ }
+
+
+.hrtag{
+    width: 100%;
+    border: 1px black solid;
+}
+
+.CategoryName{
+    /* border: 0.5px black solid; */
+    font-size: 30px;
+    border-bottom: 1px solid black;
+}
+
+
+
+/* 
+
+
+ .card{
+    border: 2px blue solid;
+    height: 330px;
+    width: 300px;
+    border-radius: 20px;
+    cursor: pointer;
+    flex-direction: column;
+
+    
+    
+    
+} 
+ .card .image{
+    height: 230px;
+    border: 2px red solid;
+    width: 299px;
+    background-position:center;
+    
+
+
+}
+.card span{
+    border: 2px red solid;
+
+
+}
+.card p{
+    border: 2px red solid;
+    width: 200px;
+
+
+}
+
+.selectsection{
+    border: 2px red solid;
+    display: flex;
+    flex-direction: column;
+    width: 58px;
+    float: right;
+    margin-top: -95px;
+    height: 100px;    
+}
+.selectsection Select{
+    padding: 3px;
+    cursor: pointer;
+
+}
+
+
+.card .about .link{
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 0px 10px;
+    letter-spacing: 2px; 
+    border-radius: 5px;
+
+    
+}
+.card .about .selectitem{
+    border: none;
+    border-bottom: 1px black solid;
+}
+
+
+.card .about .addtocard{
+margin-top: 5px;
+}
+
+ .card:hover{  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+}    
+.aman{
+  
+}
+
+.cats{
+    display:flex ;
+    flex-direction: column;
+}
+
+.kattu{
+    display: flex;
+} */

@@ -5,7 +5,6 @@ dotenv.config({})
 
 
 const ConnectDb=async ()=>{
-  
     try{
         const conn=await mongoose.connect(process.env.db_string,
         {useUnifiedTopology:true})
@@ -42,6 +41,6 @@ const fetchFoodItems = async () => {
         console.log(error)
         console.log("not connected")
     }
-}
+  }
 
 module.exports=ConnectDb
