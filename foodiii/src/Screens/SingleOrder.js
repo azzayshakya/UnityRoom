@@ -27,6 +27,10 @@ const SingleOrder = ({ items }) => {
                                     <p>  Price:{item.price}</p>
                                     <p>  Qty:{item.qty}</p>
                                     <p>  Size:{item.size}</p>
+                                    <div className='Your-Order-State'>
+                                        
+
+                                    </div>
                                 </div>
                             </li>
 

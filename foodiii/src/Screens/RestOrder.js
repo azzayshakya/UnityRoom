@@ -3,6 +3,7 @@ import SingleRestOrder from './SingleRestOrder';
 import Header from '../Component/Header';
 import background from "../Images/collections-1.jpg";
 
+
 const RestOrder = () => {
   const [data, setData] = useState([]);
   const [ordersByDate, setOrdersByDate] = useState(new Map());
@@ -12,7 +13,11 @@ const RestOrder = () => {
     const formattedDate = new Date(dateString).toLocaleDateString(undefined, options);
     return formattedDate;
   };
-  
+
+  const handleOrderStateChange = (orderId, newState) => {
+    // Update the state or perform any action based on the order state change
+    console.log(`Order ${orderId} state changed to ${newState}`);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,7 +59,11 @@ const RestOrder = () => {
               </div>
               <ul>
                 {ordersByDate.get(date).map((item, index) => (
-                  <SingleRestOrder key={index} item={item} />
+                  <SingleRestOrder
+                    key={index}
+                    item={item}
+                    onStateChange={(newState) => handleOrderStateChange(item.order.id, newState)}
+                  />
                 ))}
               </ul>
             </div>

@@ -8,6 +8,7 @@ import Header from '../Component/Header';
 import background from "../Images/zomatoHead.webp";
 import {Link} from 'react-router-dom'
 import background2 from "../Images/collections-1.jpg";
+import { responsiveFontSizes } from '@mui/material';
 
 
 
@@ -30,11 +31,8 @@ const Foodcards = () => {
             }
         });
         response = await response.json();
-
-
+        
         // console.log(response[0],response[1])
-
-
 
         setfoodItems(response[0])
         setfoodCat(response[1])
@@ -51,53 +49,8 @@ const Foodcards = () => {
 
             <Header/>
 
-        {/* <div className="Bheader"> */}
-            
-
-{/* <div className="head" style={{ backgroundImage: `url(${background})` }}>
-
-<header className='headernav'>
-  
-    
-        
-    <h4 className="icon">
-    Get the app
-    </h4>
-    <div>
-    <ol>
-        <li><Link className='link' to="/">Home</Link></li>
-        <li>Add resturant <Link to=""></Link></li>
-        <li><Link className='link' to="/login">Login</Link></li>
-        <li><Link className='link' to="/Signup">Sign up</Link></li>
-
-    </ol>
-    </div>
-   
-</header>
-
-
-<div className="mid">
-    <h1>Foodiii</h1>
-    <h3> Discover the best food & drinks in Delhi NCR </h3>
-     <div className="search-place">
-         
-            <img className="location" src="../Images/location.png" alt=""/>
-            <p>abca e akdjfak rls jaj</p>
-            
-            <img className="search" src="../Images/search.png" alt=""/>
-            <input type="search"  placeholder="search for resturant,cuisine or a dish" value={search} onChange={(e)=>{setSearch(e.target.value)}}/>     
-\            
-     </div>
-</div>              
-</div>
-        
-        </div> */}
-
 <div className="search-place">
-         
-         {/* <img className="location" src="../Images/location.png" alt=""/>
-         <p>abca e akdjfak rls jaj</p> */}
-         
+                  
          <img className="HeaderSearchImg" src="../Images/search.png" alt=""/>
          <input type="search" className='HeaderSearchInput'  placeholder="search for resturant,cuisine or a dish" value={search} onChange={(e)=>{setSearch(e.target.value)}}/>     
             
