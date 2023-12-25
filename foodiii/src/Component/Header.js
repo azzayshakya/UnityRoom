@@ -61,6 +61,13 @@ const Header = () => {
 
                         {(localStorage.getItem("authToken2")) ?
                             <li><Link className='link myOrder' to="/RestOrder">Resturent_Orders</Link></li>
+                           
+
+                            : " "}
+
+                            {(localStorage.getItem("authToken2")) ?
+                            <li><Link className='link myOrder' to="/YourOrder">Your Order</Link></li>
+                           
 
                             : " "}
 
@@ -69,10 +76,17 @@ const Header = () => {
 
                         {(localStorage.getItem("authToken")) ?
                             <li><Link className='link myOrder' to="/myOrder">My Orders</Link></li>
+                            
+
+                            
+
+
 
                             : " "}
 
                         {(!localStorage.getItem("authToken")) ?
+
+
 
                             <div className='abc'>
                                 <li><Link className='link' to="/login">Login</Link></li>

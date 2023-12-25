@@ -8,8 +8,6 @@ const reducer=(state,action)=>{
 
     switch(action.type){
         case "ADD":
-            // console.log("azzu is here")
-            // console.log(action,state)
         return [...state,{id:action.id,name:action.name,
             qty:action.qty,size:action.size,
             price:action.price,img:action.img

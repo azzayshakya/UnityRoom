@@ -38,7 +38,7 @@ const SingleRestOrder = ({ item, onStateChange }) => {
                         <option value="State" disabled hidden>State</option>
                         <option value="Pending">Pending</option>
                         <option value="Cooking">Cooking</option>
-                        <option value="Cancel">Cancel</option>
+                        <option value="Cancel">Cancel</option>dr
             </select>
         </div>
  

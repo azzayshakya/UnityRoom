@@ -51,12 +51,14 @@ const RestOrder = () => {
       <div style={{ /* backgroundImage: `url(${background})` */ }}>
         <div className='yourrestorderheading'>Your restaurant orders :</div>
         <div>
-          {/* Render orders by date */}
+         
           {[...ordersByDate.keys()].map((date) => (
             <div key={date}>
+
               <div class="nine">
                 <h1><span>{date}</span></h1>
               </div>
+
               <ul>
                 {ordersByDate.get(date).map((item, index) => (
                   <SingleRestOrder
@@ -65,7 +67,8 @@ const RestOrder = () => {
                     onStateChange={(newState) => handleOrderStateChange(item.order.id, newState)}
                   />
                 ))}
-              </ul>
+              </ul> 
+
             </div>
           ))}
         </div>
