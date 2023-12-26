@@ -20,9 +20,6 @@ const YourOrder = () => {
     },[])
 
 
-
-
-
     return <div>
       <div>
       <h1>Your Orders</h1>
@@ -31,9 +28,7 @@ const YourOrder = () => {
           {data.map((order) => (
             <li key={order.date}>
                 <SingleYourOrder item={order} />
-            </li>
-            
-            
+            </li>            
           ))}
         </ul>
       ) : (
