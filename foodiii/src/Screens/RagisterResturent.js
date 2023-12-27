@@ -24,40 +24,23 @@ const RagisterResturent = () => {
       body:JSON.stringify(credentials)
     });
     const json =await response.json();
-    console.log(json); 
+
     if(!json.success){
       alert("enter valid credentials")
     }
+
+
     if(json.success){
       localStorage.setItem("resturentId",credentials.resturentId)
-
       localStorage.setItem("authToken2",json.authToken2)
-
-      
-      console.log("auth2 is here")
-      console.log(localStorage.getItem("authToken2"))
-
-
-
-      
-      // console.log("here your auth token 2")
-      // localStorage.setItem("authToken2",json.authToken)
-      // console.log(localStorage.getItem("authToken2"))
-
-      // console.log("here your auth token 1")
-      // console.log(localStorage.getItem("authToken"))
-      
-
-
-      // console.log("resturentId:",localStorage.getItem("resturentId"))
-    
-
        navigate("/");
     }
   }
+
   const handleNameChange=(event)=>{
     setcredentials({...credentials,[event.target.name]:event.target.value})
   }
+  
     return (
     <div style={{
         backgroundImage: `url(${background})`,

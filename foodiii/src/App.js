@@ -23,6 +23,7 @@ function App() {
     <Router>
     <div>
       <Routes>
+        
         <Route exact path ="/" element={<Home/>}/>
         <Route exact path ="/login" element={<Login/>}/>
         <Route exact path ="/Signup" element={<Signup/>}/>
@@ -31,9 +32,7 @@ function App() {
         <Route exact path ="/foodcards" element={<Foodcards/>}/>
         <Route exact path ="/myOrder" element={<MyOrder/>}/>
         <Route exact path ="/YourOrder" element={<YourOrder/>}/>
-
-
-
+        
       </Routes>
     </div>
     </Router>

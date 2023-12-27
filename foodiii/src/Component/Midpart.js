@@ -19,7 +19,7 @@ const Midpart = () => {
             </div>
         </div>
 
-        <div  >
+        {/* <div  >
             <div className="image"  >
                 <img style={{ "filter":" blur(5px)" ,"overflow":"hidden"  }} className="bc" src="../Images/service-2.jpg" alt=""/>
                
@@ -30,7 +30,7 @@ const Midpart = () => {
                 
                 Currently working on this functionality..
             </div>
-        </div>
+        </div> */}
         {/* <div>
             <div className="image">
                 <img className="cd" src="../Images/clubs.jpg" alt=""/> 

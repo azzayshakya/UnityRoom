@@ -15,7 +15,6 @@ const RestOrder = () => {
   };
   
   const handleOrderStateChange = (orderId, newState) => {
-    // Update the state or perform any action based on the order state change
     console.log(`Order ${orderId} state changed to ${newState}`);
   };
 
@@ -38,7 +37,7 @@ const RestOrder = () => {
         newOrdersByDate.get(date).push(order);
       });
 
-      // Update state with newOrdersByDate
+
       setOrdersByDate(newOrdersByDate);
     };
 

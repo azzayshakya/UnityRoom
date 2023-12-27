@@ -1,6 +1,8 @@
 const express = require("express")
 const router = express.Router();
+// const User = require('../models/User');
 const User = require('../models/User');
+
 const Resturent = require('../models/Resturent')
 const Order=require('../models/Orders')
 const Order4r=require('../models/Order4rest');
@@ -95,7 +97,6 @@ router.post("/loginuser", [
 
       return res.json({ success: true, authToken: authToken })
       // return res.json({ success: true, authToken2: authToken2 })
-
       //  console.log({userData})
 
     }

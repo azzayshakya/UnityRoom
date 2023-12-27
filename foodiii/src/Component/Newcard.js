@@ -9,8 +9,7 @@ const propTypes = {};
 
 const Newcard = (props) => {
   let data = useCart();
-  // console.log("hey its me")
-  // console.log(data)
+
 
 
   let foodItem = props.foodItems;
@@ -24,75 +23,14 @@ const Newcard = (props) => {
 
   const handleAddToCart =async()=>{
 
-
-
-    // let food =[];
-    // for(const item of data){
-    //   if (item.id===props.foodItem._id){
-    //     food =item;
-    //     break;
-    //   }
-    // }
-    // if(food!==[]){
-    //   if(food.size===size){
-    //     await dispatch ({type:"UPDATE",id:foodItem._id,price:finalPrice,qty:qty})
-    //     return
-    //   }
-    // }
-
-
-  await dispatch({type:"ADD",id:props.foodItems._id,
-  name:props.foodItems.name,
-  img:props.foodItems.img,
-  price:finalPrice,qty:qty,size:size})
-
-  // console.log("hey its me")
-  // console.log(data)
-  // console.log("hey its me")
-
+  await dispatch({type:"ADD",id:props.foodItems._id, name:props.foodItems.name,img:props.foodItems.img,price:finalPrice, qty:qty,size:size})
   }
-
-
-  // const handleAddToCart = async () => {
-
-
-
-  //   let food = [];
-  //   for (const item of data) {
-  //     if (item.id === props.foodItem._id) {
-  //       food = item;
-  //       break;
-  //     }
-  //   }
-  //   if (food !== []) {
-  //     if (food.size === size) {
-  //       await dispatch({ type: "UPDATE", id:props.foodItem._id, price: finalPrice, qty: qty })
-  //       return
-  //     }
-  //     else if (food.size !== size) {
-  //       await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, price: finalPrice, qty: qty, size: size})
-  //       return
-  //       // console.log("Size different so simply ADD one more to the list")
-  //     }
-  //     return
-  //   }
-  //       await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, price: finalPrice, qty: qty, size: size })
-  // }
-
-
-  // await dispatch({type:"ADD",id:props.foodItems._id,
-  // name:props.foodItems.name,
-  // price:finalPrice,qty:qty,size:size})
-  // console.log(data)
-
 
   let finalPrice = qty * parseInt(options[size]);
   useEffect(() => {
     setSize(priceRef.current.value)
   }, [])
 
-
-  // console.log(priceOptions)
   return <div>
     <div class="card mt-3 cardmainhover" style={{ "width": "18rem", "maxHeight": "500px" }}  >
       <div className="B-image " >
@@ -111,6 +49,7 @@ const Newcard = (props) => {
                 borderTopRightRadius:"20px"
                }} src="../Images/service-1.jpg" alt="" />  */}
       </div>
+      
       <div class="card-body ">
         <h5 class="card-title">{props.foodItems.name}</h5>
         <div className="container w-100">

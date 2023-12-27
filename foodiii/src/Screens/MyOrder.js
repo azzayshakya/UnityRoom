@@ -3,15 +3,13 @@ import React, { useEffect, useState } from 'react'
 import SingleOrder from './SingleOrder';
 import Header from '../Component/Header';
 import Css from '../Css/SingleOrder.css'
-// import background from "../Images/collections-4.jpg";
+
 
 
 const MyOrder = () => {
 
     
-    const [orderData, setOrderData] = useState([]); // Initialize with an empty object
-    // console.log("this is your data")    
-    // console.log(orderData)
+    const [orderData, setOrderData] = useState([]);
       
 
     useEffect(() => {
@@ -44,63 +42,6 @@ const MyOrder = () => {
 
         fetchMyOrder();
     }, []);
-    
-
-
-    // return <div>
-
-
-    //     <div className='container'>
-    //         <div className='row'>
-    //             {orderData.length > 0 ? (
-    //                 orderData.map((data, index) => (
-    //                     <div key={index}>
-                            
-    //                         {data.Order_data ? (
-    //                             data.orderData.order_data
-    //                                 .slice(0)
-    //                                 .reverse()
-    //                                 .map((item, i) => (
-    //                                     <div key={i}>
-    //                                         {item.Order_date ? (
-    //                                             <div className='m-auto mt-5'>
-    //                                                 {/* Render Order Date */}
-    //                                             </div>
-    //                                         ) : (
-    //                                             <div className='col-12 col-md-6 col-lg-3'>
-    //                                                 <div className='card mt-3' style={{ width: '16rem', maxHeight: '360px' }}>
-    //                                                     <img src={item.img} className='card-img-top' alt='...' style={{ height: '120px', objectFit: 'fill' }} />
-    //                                                     <div className='card-body'>
-    //                                                         <h5 className='card-title'>{item.name}</h5>
-    //                                                         <div className='container w-100 p-0' style={{ height: '38px' }}>
-    //                                                             <span className='m-1'>{item.qty}</span>
-    //                                                             <span className='m-1'>{item.size}</span>
-    //                                                             <span className='m-1'>{item.Order_date}</span>
-    //                                                             <div className='d-inline ms-2 h-100 w-20 fs-5'>
-    //                                                                 ₹{item.price}/-
-    //                                                             </div>
-    //                                                         </div>
-    //                                                     </div>
-    //                                                 </div>
-    //                                             </div>
-    //                                         )}
-    //                                     </div>
-    //                                 ))
-    //                         ) : (
-    //                             ''
-    //                         )}
-    //                     </div>
-    //                 ))
-    //             ) : (
-    //                 // Handle the case when orderData is empty
-    //                 <div>No order data available.</div>
-    //             )}
-    //         </div>
-    //     </div>
-        
-
-    //         </div>;
-
 
    return(<div >
 

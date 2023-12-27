@@ -7,7 +7,7 @@ const YourOrder = () => {
     useEffect(()=>{
 
         let email = localStorage.getItem('userEmail');
-        console.log(email);
+        // console.log(email);
 
         const fetchData =async()=>{
             let response= await fetch("http://localhost:5000/api/yourorders",{
@@ -32,7 +32,7 @@ const YourOrder = () => {
           ))}
         </ul>
       ) : (
-        <p>No orders available.</p>
+        <p>No orders is loading.</p>
       )}
     </div>
         

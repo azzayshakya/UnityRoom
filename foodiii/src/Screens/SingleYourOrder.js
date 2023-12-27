@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SingleYourOrder = ({item}) => {
-    console.log(item)
+    // console.log(item)
     return (
     <div>
         <h2>{item.order.name}</h2>
@@ -10,7 +10,7 @@ const SingleYourOrder = ({item}) => {
         <p>{item.order.price}</p>
         <p>{item.order.size}</p>
         <div className="order_state">
-            
+
         </div>
         
 

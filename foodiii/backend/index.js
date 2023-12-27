@@ -1,6 +1,5 @@
 const express = require('express')
 const mongoose=require('mongoose')
-// const connectDB=require('./db').ConnectDb
 const app = express()
 const port = 5000
 const mongoDB =require("./db")
@@ -8,7 +7,7 @@ mongoDB();
 
 
 app.get('/', (req, res) => {
-  res.send('ajay')
+  res.send(`Azzay Your app listening on port ${port}`)
 })
 app.use((req,res,next)=>{
   res.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
@@ -17,10 +16,18 @@ app.use((req,res,next)=>{
   );
   next();
 })
+
+
 app.use(express.json());
 app.use("/api/",require("./Routes/CreateUser"));
-app.use("/api/",require("./Routes/DisplayData"));
+app.use("/api/",require("./Routes/foodData"));
 app.use("/api/",require("./Routes/OrderData"));
+app.use("/api/",require("./Routes/YourOrder"));
+app.use("/api",require("./Routes/myOrderData"));
+
+// app.use("/api/",require("./Routes/Resturent/authenticateResturent"));
+// app.use("/api/",require("./Routes/Resturent/getOrderOfMyresturant"));
+
 
 
 

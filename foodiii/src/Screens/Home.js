@@ -10,11 +10,7 @@ import orderActions from '../store/order/orderActions';
 const Home = () => {
     const chaman=useSelector(state=>state.order.orderStatus);
     const dispatch=useDispatch();
-
     
-
-
-    console.log(chaman )
 
     return( <div>
         <Header/>

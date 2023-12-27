@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import css from '../Css/Foodcards.css'
-// import Card from '../Component/Card';
-// import Navbar from '../Component/Navbar';
 import Footer from '../Component/Footer'
 import Newcard from '../Component/Newcard';
 import Header from '../Component/Header';
@@ -19,9 +17,7 @@ const Foodcards = () => {
     const [search, setSearch] = useState("");
     const [foodCat, setfoodCat] = useState([]);
     const [foodItems, setfoodItems] = useState([]);
-    // console.log(foodCat)
-    // console.log(foodItems)
-    // console.log("ajay is here")
+
 
     const loadData = async () => {
         let response = await fetch("http://localhost:5000/api/foodData", {
@@ -31,8 +27,6 @@ const Foodcards = () => {
             }
         });
         response = await response.json();
-        
-        // console.log(response[0],response[1])
 
         setfoodItems(response[0])
         setfoodCat(response[1])
@@ -46,7 +40,6 @@ const Foodcards = () => {
         <div className="cardspage" style={{ 
             // backgroundImage: `url(${background2})`
              }}>
-
             <Header/>
 
 <div className="search-place">

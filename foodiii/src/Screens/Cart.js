@@ -18,14 +18,9 @@ const Cart = () => {
         </div>
       )
     }
-    // const handleRemove = (index)=>{
-    //   // console.log(index)
-    //   dispatch({type:"REMOVE",index:index})
-    // }
-  
+    
     const handleCheckOut = async () => {
       let userEmail = localStorage.getItem("userEmail");
-      // console.log(userEmail)
       
       let response = await fetch("http://localhost:5000/api/orderData", {
    
@@ -37,11 +32,9 @@ const Cart = () => {
           order_data: data,
           email: userEmail,
           order_date: new Date().toDateString()
+
         })
       });
-      // console.log("ajay")
-      // console.log(data)
-      // console.log("JSON RESPONSE:::::", response.status)
 
       if (response.status === 200) {
         dispatch({ type: "DROP" })
@@ -89,10 +82,6 @@ const Cart = () => {
           <button className='btn bg-success mt-5 ' onClick={handleCheckOut} > Check Out </button>
         </div>
       </div>
-
-
-
-
     </div>;
 }
 

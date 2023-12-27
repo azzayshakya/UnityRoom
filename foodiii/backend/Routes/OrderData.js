@@ -7,20 +7,18 @@ const UserOrder = require('../models/UserOrder');
 const { ContentCopy, Email } = require("@mui/icons-material");
 
 router.post('/orderData',async(req,res)=>{
+
+// in a collection-1
+
     let data =req.body.order_data   
     await data.unshift({ Order_date: req.body.order_date });
-
-    let eId = await Order.findOne({'email':req.body.email})
     let user=await User.findOne({email:req.body.email})
-    // console.log("user:",user)
-
 
     let array=[]
     for(let i=0;i<data.length;i++){
         let obj={};
         obj.email=req.body.email
         obj.MobileNo=user.MobileNo
-        // console.log(data[i])
         helpObj={}
         helpObj.id=data[i].id
         helpObj.name=data[i].name
@@ -28,9 +26,7 @@ router.post('/orderData',async(req,res)=>{
         helpObj.size=data[i].size
         helpObj.price=data[i].price
         helpObj.img=data[i].img
-
-    obj.order=helpObj
-
+        obj.order=helpObj
         array.push(obj);
     }
     await Order4r.insertMany(array);
@@ -39,12 +35,13 @@ router.post('/orderData',async(req,res)=>{
 
     
 
+
+// in a collection-2
     let array2=[]
     for(let i=0;i<data.length;i++){
         let obj={};
         obj.email=req.body.email
         obj.MobileNo=user.MobileNo
-        // console.log(data[i])
         helpObj={}
         helpObj.id=data[i].id
         helpObj.name=data[i].name
@@ -52,19 +49,17 @@ router.post('/orderData',async(req,res)=>{
         helpObj.size=data[i].size
         helpObj.price=data[i].price
         helpObj.img=data[i].img
-
-    obj.order=helpObj
-
+        obj.order=helpObj
         array2.push(obj);
     }
-
     await UserOrder.insertMany(array2);
 
 
 
+// in a collection-3
 
+let eId = await Order.findOne({'email':req.body.email})
     
-    // console.log(eId)
     if(eId===null){
         try{
             await Order.create({
@@ -74,9 +69,7 @@ router.post('/orderData',async(req,res)=>{
                 res.json({success:true})
             })
         }catch(error){
-            // console.log(error)
                 console.log(error.message)
-                // res.send("Server Error",error.message)
                 res.status(500).send("Server Error: " + error.message);
             
         }
@@ -94,35 +87,4 @@ router.post('/orderData',async(req,res)=>{
     }
 })
 
-
-router.post('/myOrderData', async (req, res) => {
-    try {
-        const myData = await Order.findOne({ 'email': req.body.email });
-        // console.log("hey its me ajay")
-        // console.log(myData)
-        
-        if (!myData) {
-            // Handle case where order data is not found for the provided email
-            return res.status(404).json({ error: "Order Data Not Found" });
-        }
-        res.json({ orderdata: myData });
-    //console.log("ajay is here")
-    // console.log(myData)
-        
-    } catch (error) {
-        console.error("Server Error:", error);
-        res.status(500).json({ error: "Server Error", message: error.message });
-    }
-});
-
-router.get('/yourorders',async (req,res,next)=>{
-    try{
-      const data=await UserOrder.find({order:{ $exists: true }}).sort({ date: -1 });
-      res.status(200).json({data:data});
-    }
-    catch(err){
-      console.log(err)
-      res.status(500).json({data:null,error:"internal server errror /yourorders"});
-    }
-  })
 module.exports=router;
