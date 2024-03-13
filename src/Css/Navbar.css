@@ -1,0 +1,141 @@
+header{
+    /* border: 2px red solid; */
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+
+.logo{
+    /* border: 2px red solid; */
+    position: relative;
+    left:50px;
+    display: flex;
+    align-items: center;
+    color:white ;
+
+}
+
+.LogoImg{
+    background:url('../images/LogoMaker.png') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+.LogoTitle{
+    margin-left: 6px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type :none;
+    color:white ;
+
+    
+}
+
+header ul  li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* text-align: center; */
+    border: 1px white solid;
+    height: 35px;
+    width: 60px; 
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 20px;
+  
+
+}
+
+.active{
+    background-color: white;
+    color: black;
+
+}
+header ul li{
+    padding: 0px 20px;
+    /* text-decoration: none; */
+}
+.Link{
+    color:white;
+    text-decoration: none;
+}
+.authButton {
+    /* padding: 0px 10px; */
+    position: relative;
+    right:50px;
+}
+
+.authButton button{
+
+    /* margin-left: 10px; */
+    /* padding: 0px 10px; */
+    background: none;
+    border: none;
+    /* background: black; */
+    border: 1px white solid;
+    height: 35px;
+    width: 80px; 
+
+    height: 35px;
+    width: 80px; 
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+.authButton  .signupbutton{
+    border: none;
+    background-color: rgb(79, 4, 150);
+}
+.yoo{
+    
+}
+
+/* 
+.midHomeButton{
+    margin-top: 50px;
+    position: absolute;
+    top: 448px;
+    left: 48px;
+
+}
+.midHomeButton button{
+    background-color: rgb(79, 4, 150);
+    border: none;
+    border: 1px white solid;
+    height: 50px;
+    width: 150px; 
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    
+}
+.midHomeButton .midHomeButton2nd{
+    margin-left: 20px;
+
+}
+.LoginRequestOnHomeMid{
+    margin-top: 70px;
+    position: absolute;
+    top: 432px;
+    left: 48px;
+}
+.LoginRequestOnHomeMid p span{
+    color: rgb(244, 158, 158);
+
+} */

@@ -1,0 +1,51 @@
+.HomeMid{
+    /* border: 2px red solid; */
+    color: white;
+    width: 42%;
+    margin-left: 50px;
+    margin-top: 150px;
+}
+.HomeMid{
+   
+}
+.HomeMid .about h1{
+    font-size: 45px;
+    font-weight: 500;
+    
+}
+.HomeMid .about p{
+font-size: 20px;
+    
+}
+.aboutTogether{
+    color: rgb(79, 4, 150);
+}
+.midHomeButton{
+    margin-top: 50px;
+
+}
+.midHomeButton button{
+    background-color: rgb(79, 4, 150);
+    /* background: none; */
+    border: none;
+    border: 1px white solid;
+    height: 50px;
+    width: 150px; 
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    
+}
+.midHomeButton .midHomeButton2nd{
+    margin-left: 20px;
+
+}
+.LoginRequestOnHomeMid{
+    margin-top: 70px;
+}
+.LoginRequestOnHomeMid p span{
+    color: rgb(244, 158, 158);
+
+}
