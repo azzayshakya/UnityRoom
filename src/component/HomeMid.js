@@ -2,8 +2,6 @@ import React from "react";
 import '../Css/HomeMid.css'
 import { Link } from "react-router-dom";
 const HomeMid=()=>{
-    // console.log(localStorage.getItem("authToken"))
-
     return(<>
    <div className="HomeMid">
 
@@ -17,7 +15,7 @@ const HomeMid=()=>{
     <div className="midHomeButton">
 
     <Link to={"/CreateMeet"}><button>Make-Room</button></Link>       
-    <Link  to={"/JoinMeet"}><button className="midHomeButton2nd">Watch-Party</button></Link>
+    <Link  to={"/JoinMeet"}><button className="midHomeButton2nd">Join-Room</button></Link>
     </div>
     :
     <div  className="LoginRequestOnHomeMid">

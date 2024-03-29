@@ -7,6 +7,10 @@ const SignUpUserSchema=new Schema({
         type:String,
         require:true,
     },
+    userId:{
+        type:String,
+        require:true,
+    },
     email:{
         type:String,
         require:true,
@@ -18,6 +22,6 @@ const SignUpUserSchema=new Schema({
     password:{
         type:String ,
         require:true
-    }
+    }    
 })
 module.exports=mongoose.model("users",SignUpUserSchema)

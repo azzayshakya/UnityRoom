@@ -35,14 +35,14 @@ const SignUpPage=()=>{
         if(!json.success){
             setShowPopup(false)
             setsignUpButton(true)
-            alert("wrong credintles")
+            alert(json.message)
         }
         if(json.success){
 
             setShowPopup(false)
             setsignUpButton(true)
             alert("signup successfully")
-            Navigate("/LoginPage")
+            // Navigate("/LoginPage")
             
         }
     }
