@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="authButton">
             
          <Link to={"/LoginPage"}><button className="loginbutton">LogIn</button></Link>
-         <Link to={"/SignUpPage"}><button className="signupbutton">SignUp</button></Link>
+         <Link to={"/UserImage"}><button className="signupbutton">SignUp</button></Link>
 
       </div>
 
