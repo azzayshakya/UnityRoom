@@ -1,0 +1,77 @@
+.createmeetform{
+        /* border: 2px red solid; */
+        
+        width: 300px;
+        height: 300px;
+        position: relative;
+        left: 36%;
+        top: 100px;
+        padding: 20px 20px;
+        /* border: 1px solid; */
+        border-radius:10px;
+        /* background-color: white; */
+        border-radius: 52px;
+        background: rgba( 255, 255, 255, 0.15 );
+        backdrop-filter:blur(10px) ;
+        /* border: 2px red solid; */
+
+}
+.createmeetform h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.createmeetform .RoomTitle{
+    border-top: 1px black solid;
+
+}
+.createmeetform .SecoundRowofRoomTitle input{
+
+    padding: 8px 10px;
+    width: 85%;
+    margin: 10px 0px;
+   
+    /* position: relative;
+    top: -28px;
+    left: 35px; */
+    border: none;
+    background: rgba( 255, 255, 255, 0.4 );
+    backdrop-filter:blur(10px) ;
+    border-radius: 20px;
+
+}
+.createmeetform .secoundRpwOfRoomIdRow{
+    padding: 5px 10px;
+    width: 85%;
+    margin: 10px 0px;
+   
+    /* position: relative;
+    top: -28px;
+    left: 35px; */
+    border: none;
+    background: rgba( 255, 255, 255, 0.4 );
+    backdrop-filter:blur(10px) ;
+    border-radius: 20px;
+
+}
+.createRoomButton{
+    margin-left: 80px;
+}
+.createRoomButton button{
+       /* padding: 0px 10px; */
+       background: none;
+       border: none;
+       /* background: black; */
+       /* border: 1px white solid; */
+       
+   
+       height: 45px;
+       width: 150px; 
+       font-size: 20px;
+       font-weight: 500;
+       border-radius: 20px;
+       color: white;
+       cursor: pointer;
+       background-color: rgb(79, 4, 150);
+}

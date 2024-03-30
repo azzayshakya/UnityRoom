@@ -16,6 +16,7 @@ app.get("/",(req,res)=>{
 app.use(express.json());
 app.use(require("./Routes/SignUpRoute"))
 app.use(require("./Routes/LoginUserRoute"))
+app.use(require("./Routes/CreateMeetRoute"))
 
 
 app.listen(port, () => {

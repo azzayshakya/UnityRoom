@@ -44,6 +44,8 @@ const LoginPage=()=>{
             setsignInButton(true)
             localStorage.setItem("authToken",json.authToken)
             localStorage.setItem("userEmail",credentials.email)
+            localStorage.setItem("userId",json.userId)
+            // console.log(userId)
             alert("login successfully")
             Navigate("/")
         }
