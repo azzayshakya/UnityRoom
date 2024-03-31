@@ -19,7 +19,7 @@ const Navbar = () => {
         <header>
 
             <div className="logo">
-            <div className="LogoImg"></div><div className="LogoTitle">UnityRoom</div>
+            <div className="LogoImg"></div><div className="LogoTitle">VE-Room</div>
             </div>
         
         <ul className="navbar">

@@ -4,12 +4,16 @@ import React, { useState } from "react";
 import Navbar from "../component/Navbar";
 import '../Css/Home.css'
 import '../Css/LoginPage.css'
-
-import { Flashlight, Lock } from 'lucide-react';
-import { Mail } from 'lucide-react';
 import { GiCrossFlare } from "react-icons/gi";
-import { User } from 'lucide-react';
-import { Contact } from 'lucide-react';
+import { CiMail } from "react-icons/ci";
+import { CiUser } from "react-icons/ci";
+import { IoMdContact } from "react-icons/io";
+import { CiLock } from "react-icons/ci";
+
+// import { Flashlight, Lock } from 'lucide-react';
+// import { Mail } from 'lucide-react';
+// import { User } from 'lucide-react';
+// import { Contact } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -104,19 +108,19 @@ const SignUpPage = () => {
                             <h2>SignUp</h2>
                         </div>
                         <div className="LoginPageInputRow LoginPageFirstInputRow">
-                            <div className="formIcon"><User /></div>
+                            <div className="formIcon"><CiUser /></div>
                             <input type="name" name="name" value={credentials.name} onChange={handleNameChange} id="name" placeholder="Your Name" />
                         </div>
                         <div className="LoginPageInputRow">
-                            <div className="formIcon"><Mail /></div>
+                            <div className="formIcon"><CiMail /></div>
                             <input type="email" name="email" value={credentials.email} onChange={handleNameChange} id="email" placeholder="Your Email" />
                         </div>
                         <div className="LoginPageInputRow">
-                            <div className="formIcon"><Contact /></div>
+                            <div className="formIcon"><IoMdContact /></div>
                             <input type="Number" name="mobileNumber" value={credentials.mobileNumber} onChange={handleNameChange} id="number" placeholder="Mobile Number" />
                         </div>
                         <div className="LoginPageInputRow">
-                            <div className="formIcon"><Lock /></div>
+                            <div className="formIcon"><CiLock /></div>
                             <input type="password" name="password" value={credentials.password} onChange={handleNameChange} id="password" placeholder="Password" />
                         </div>
                         {showPopup &&

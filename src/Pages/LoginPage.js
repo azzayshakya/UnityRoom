@@ -5,8 +5,10 @@ import css from '../Css/Home.css'
 import '../Css/LoginPage.css'
 import HomeMid from "../component/HomeMid";
 
-import { Lock } from 'lucide-react';
-import { Mail } from 'lucide-react';
+// import { Lock } from 'lucide-react';
+import { FaLock } from "react-icons/fa";
+// import { Mail } from 'lucide-react';
+import { CiMail } from "react-icons/ci";
 import { GiCrossFlare } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
 
@@ -69,12 +71,12 @@ const LoginPage=()=>{
                 </div>
 
                 <div className="LoginPageInputRow LoginPageFirstInputRow">
-                    <div className="formIcon"><Mail/></div>
+                    <div className="formIcon"><FaLock/></div>
                     <input type="email" name="email" value={credentials.email} onChange={HandleNamechange}  id="emailInput" placeholder="Your Email"/>
                 </div>
 
                 <div className="LoginPageInputRow"> 
-                <div className="formIcon"><Lock/></div>    
+                <div className="formIcon"><CiMail/></div>    
                         <input type="password" name="password" value={credentials.password} onChange={HandleNamechange} placeholder="Password"/>     
                     {/* <input type="password" name="password" value={credentials.password} onChange={HandleNamechange} id="passwordInput" placeholder="Password"/> */}
                 </div> 
