@@ -22,7 +22,7 @@ const LoginPage=()=>{
     
 
         event.preventDefault();
-        const response=await fetch("http://localhost:8000/LogIn",{        
+        const response=await fetch("http://localhost:2000/LogIn",{        
             method:"POST",
             headers:{
                 'Content-Type':'application/json'     

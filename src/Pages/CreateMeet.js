@@ -11,7 +11,7 @@ const CreateMeet = () => {
         
         try {
             const userId = localStorage.getItem("userId");
-            const response = await fetch("http://localhost:8000/createMeet", {
+            const response = await fetch("http://localhost:2000/createMeet", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

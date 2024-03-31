@@ -32,7 +32,7 @@ const SignUpPage = () => {
         setSignUpButton(false);
         setShowPopup(true);
         event.preventDefault();
-        const response = await fetch("http://localhost:8000/SignUp", {
+        const response = await fetch("http://localhost:2000/SignUp", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ const SignUpPage = () => {
             // Navigate("/LoginPage")
         }
 
-        const audioResponse = await fetch("http://localhost:8000/UploadAudio", {
+        const audioResponse = await fetch("http://localhost:2000/UploadAudio", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
