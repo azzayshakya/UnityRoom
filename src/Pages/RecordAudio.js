@@ -1,8 +1,13 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef,useCallback } from 'react';
 import '../Css/RecordAudio.css';
 import { useNavigate } from 'react-router-dom';
+import { useSelector,useDispatch } from 'react-redux';
+import { setAudio} from '../store/one_to_one/actions';
 
 const VoiceRecorder = () => {
+    const audio=useSelector(state=>state.one2one.audioBase64)
+    const dispatch=useDispatch()
+
     const navigate = useNavigate();
     const [recording, setRecording] = useState(false);
     const [audioBlob, setAudioBlob] = useState(null);
@@ -37,9 +42,9 @@ const VoiceRecorder = () => {
             const reader = new FileReader();
             reader.onload = () => {
                 const base64Data = reader.result.split(',')[1];
-                console.log("audio to text", base64Data)
+                dispatch(setAudio(base64Data))
                 // Navigate to SignUpPage with base64 audio data
-                navigate('/SignUpPage', { state: { audio: base64Data } });
+                navigate('/SignUpPage');
             };
             reader.readAsDataURL(audioBlob);
         }
@@ -73,6 +78,12 @@ const VoiceRecorder = () => {
             audio.play();
         }
     };
+
+    // const handleSubmitImage = useCallback(()=>{
+    //     if(audio.length>0){
+    //         navigate('/SignUpPage')
+    //     }
+    // },[audio])
 
     return (
         <div className='Home'>

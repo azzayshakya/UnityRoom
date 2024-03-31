@@ -22,6 +22,14 @@ const SignUpUserSchema=new Schema({
     password:{
         type:String ,
         require:true
+    },
+    image:{
+        type:String ,
+        require:true
+    },
+    audio:{
+        type:String ,
+        require:true
     }    
 })
 module.exports=mongoose.model("users",SignUpUserSchema)

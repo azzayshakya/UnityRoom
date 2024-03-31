@@ -1,14 +1,19 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef,createContext, useCallback} from 'react';
 import Navbar from '../component/Navbar';
 import '../Css/userImage.css';
 import { useNavigate } from 'react-router-dom';
+import RecordAudio from './RecordAudio'
+import { useSelector,useDispatch } from 'react-redux';
+import { setImage } from '../store/one_to_one/actions';
+
 
 const UserImages = () => {
-    const [image, setImage] = useState(null);
-    const [showSubmitButton, setShowSubmitButton] = useState(false);
+    const dispatch=useDispatch()
+   const [showSubmitButton, setShowSubmitButton] = useState(false);
     const videoRef = useRef(null);
     const canvasRef = useRef(null);
     const navigate = useNavigate();
+    const image=useSelector(state=>state.one2one.imageBase64)
 
     useEffect(() => {
         if (!videoRef.current || !canvasRef.current) return;
@@ -35,16 +40,16 @@ const UserImages = () => {
         context.drawImage(videoRef.current, 0, 0, canvasRef.current.width, canvasRef.current.height);
 
         const imageDataURL = canvasRef.current.toDataURL('image/png');
-        setImage(imageDataURL);
+        console.log("heyy",imageDataURL)
+        dispatch(setImage(imageDataURL));
         setShowSubmitButton(true); 
     };
 
-    const handleSubmitImage = () => {
-        if (!image) return;
-
-        const base64Image = image.split(',')[1];
-        navigate("/UserAudio", { state: { image: base64Image } });
-    };
+    const handleSubmitImage = useCallback(()=>{
+        if(image.length>0){
+            navigate('/UserAudio')
+        }
+    },[image])
 
     return (
         <div className="Home">
@@ -74,6 +79,7 @@ const UserImages = () => {
                 {!showSubmitButton && (
                     <div className="captureimagebutton">
                         <button onClick={captureImage}>Capture Image</button>
+                        {/* <RecordAudio image={image} /> */}
                     </div>
                 )}
             </div>

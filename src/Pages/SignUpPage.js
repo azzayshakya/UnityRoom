@@ -11,16 +11,22 @@ import { GiCrossFlare } from "react-icons/gi";
 import { User } from 'lucide-react';
 import { Contact } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
-const SignUpPage = ({ location }) => {
-    
+import { useSelector } from "react-redux";
+
+
+const SignUpPage = () => {
+    const image=useSelector(state=>state.one2one.imageBase64)
+    const audio=useSelector(state=>state.one2one.audioBase64)
+
+    console.log("signup page image",image)
+    console.log("signup page audio",audio)
     const [credentials, setCredentials] = useState({ name: "", email: "", mobileNumber: "", password: "" });
     const [showPopup, setShowPopup] = useState(false);
     const [signUpButton, setSignUpButton] = useState(true);
     const Navigate = useNavigate();
 
     // console.log("location.state:", location.state);
-    const { image } = location?.state || {};
-    console.log("signup page image:", image);
+
 
     const handleSubmit = async (event) => {
         setSignUpButton(false);
@@ -31,13 +37,14 @@ const SignUpPage = ({ location }) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            // Including image data in the request body
+            
             body: JSON.stringify({
                 name: credentials.name,
                 email: credentials.email,
                 mobileNumber: credentials.mobileNumber,
                 password: credentials.password,
-                image: image // Sending image data
+                image: image,
+               
             })
         })
         const json = await response.json();
@@ -51,9 +58,35 @@ const SignUpPage = ({ location }) => {
             setShowPopup(false);
             setSignUpButton(true);
             alert("signup successfully");
-            Navigate("/LoginPage")
+            // Navigate("/LoginPage")
+        }
+
+        const audioResponse = await fetch("http://localhost:8000/UploadAudio", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: credentials.email, audio: audio
+            })
+        });
+
+        const audioJson = await audioResponse.json();
+        if (!audioJson.success) {
+            setShowPopup(false);
+            setSignUpButton(true);
+            alert(audioJson.message);
+            return;
+        }
+        if (audioJson.success) {
+            // setShowPopup(false);
+            // setSignUpButton(true);
+            alert(audioJson.message);
+            return;
         }
     }
+
+    
 
     const handleNameChange = (event) => {
         setCredentials({ ...credentials, [event.target.name]: event.target.value })
